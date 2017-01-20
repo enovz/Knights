@@ -9,8 +9,8 @@ export const generator = {
     },
     getName: function () {
 
-        let nameIndex = this.randomIntFromInterval(0, names.length);
-        let surnameIndex = this.randomIntFromInterval(0, surnames.length);
+        let nameIndex = this.randomIntFromInterval(0, (names.length-1));
+        let surnameIndex = this.randomIntFromInterval(0, (surnames.length-1));
 
         let name = names[nameIndex] + " " + surnames[surnameIndex];
         return name;
@@ -37,13 +37,13 @@ export const generator = {
 
         for (let i = 0; i < 10; i++) {
 
-            let traitIndex = this.randomIntFromInterval(0, traits.length);
+            let traitIndex = this.randomIntFromInterval(0, (traits.length-1));
             newTraits.push(traits[traitIndex]);
         }
 
         return newTraits;
     },
-    getArmorParts() {
+    getArmorParts: function() {
 
         let armor = [];
 
@@ -60,7 +60,7 @@ export const generator = {
             let partId = armorPart + randomNumber + ".format"; //set FORMAT !!
 
             // /img/torsos/torso3.format
-            let source = imgPath + folder + partId + ".format";
+            let source = imgPath + folder + partId;
 
             let newArmorPart = {
                 Id : armorPart,

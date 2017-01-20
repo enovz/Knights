@@ -15,10 +15,11 @@ function Knight() {
     this.name = generator.getName();
     this.stats = generator.getStats();
     this.traits = generator.getTraits();
-    this.renderArmor();
+    this.armor = generator.getArmorParts();
 
 }
 
+/* move to clickHandler();
 Knight.prototype.renderArmor = function () {
 
     let armor = generator.getArmorParts();
@@ -27,5 +28,5 @@ Knight.prototype.renderArmor = function () {
         document.getElementById(armorPart.Id).src = armorPart.source;
     });
     
-}
+}*/
 
