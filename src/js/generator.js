@@ -53,7 +53,7 @@ export const generator = {
         armorParts.forEach(armorPart => {
 
             // /torsos/
-            let folder = '/' + armorPart + 's/';
+            let folder = '/' + armorPart + '/';
 
             // torso3.format
             let randomNumber = generator.randomIntFromInterval(1, 20);
@@ -67,7 +67,7 @@ export const generator = {
                 source : source
             };
 
-            armor.push(armorPart);
+            armor.push(newArmorPart);
         });
 
         return armor;

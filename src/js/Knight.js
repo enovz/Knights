@@ -9,7 +9,7 @@
 
 import {generator} from './generator' 
 
-function Knight() {
+export function Knight() {
 
     //Properties
     this.name = generator.getName();

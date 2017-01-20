@@ -3,9 +3,12 @@
 
 import { Knight } from './js/Knight'
 
+
 if (!window.app) {
 
     //let app = {};
+
+    
 
     /**clickHandler() */
     let knight1 = new Knight();
