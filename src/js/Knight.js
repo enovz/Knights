@@ -19,14 +19,3 @@ export function Knight() {
 
 }
 
-/* move to clickHandler();
-Knight.prototype.renderArmor = function () {
-
-    let armor = generator.getArmorParts();
-
-    armor.forEach(armorPart =>{
-        document.getElementById(armorPart.Id).src = armorPart.source;
-    });
-    
-}*/
-

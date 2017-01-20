@@ -53,8 +53,8 @@ export const traits = [
     "shy","thoughtless","timid","unkind","unstable","untidy","wicked","wise","witty"
 ];
 export const armorParts = [
-    "helmet",
-    "torso",
+    "helm",
+    "chest",
     "arms",
     "legs"
 ];
