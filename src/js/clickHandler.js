@@ -6,7 +6,7 @@
  * 3. render new knight to view
  * 4. print view
  * 5. cool down
- * 5. reset view 
+ * 5. toggle visibility 
  */
 
 /**dependencies */
@@ -42,7 +42,7 @@ function getView() {
     let $knight = $('#knight');
 
     //toggle visable/hidden
-    //resetView($logo, $knight);
+    //toggleVisibility($logo, $knight);
 
     //get knight elements
     let armor = $knight.find('#armor');
@@ -88,7 +88,7 @@ function printKnight() {
      * 1.print page
      */
 }
-function resetView(logo, knight) {
+function toggleVisibility(logo, knight) {
 
     /**
      * 1. set knight div to be hidden
