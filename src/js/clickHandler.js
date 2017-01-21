@@ -51,7 +51,7 @@ export function clickHandler() {
 =======
 
     renderKnight(view, newKnight);
-    printKnight(this._templateSource);
+    //printKnight(this._templateSource);
     
 >>>>>>> v0.1.2
 
