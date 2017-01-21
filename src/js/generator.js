@@ -45,8 +45,10 @@ export const generator = {
     },
     getArmorParts: function () {
 
+        //test
         let armor = [];
 
+        //let armor = {};
         //img
         let imgPath = './img'
 
@@ -62,12 +64,18 @@ export const generator = {
             // /img/torsos/torso_3.format
             let source = imgPath + folder + partId;
 
+            //test
             let newArmorPart = {
                 Id: armorPart,
                 source: source
             };
 
+            //test
             armor.push(newArmorPart);
+
+            //armor[armorPart] = source;
+
+
         });
 
         return armor;

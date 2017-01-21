@@ -80,8 +80,8 @@ function getView() {
             trait_2: $traits.find('#trait_2'),
             trait_3: $traits.find('#trait_3'),
         },*/
-        traits: $traits,
-        stats: $stats,
+        traits:$traits,
+        stats:$stats,
         biography: $biography
 
     }
@@ -99,10 +99,11 @@ function renderKnight(view, knight) {
      * 5. renderBiography
      */
 
-    let $armor = $("#armor");
+    let armor = $("#armor");
     //render armor
     knight.armor.forEach(part => {
-        //console.log(armorPart);
+
+        //document.getElementById(part.Id).src = part.source;
         armor.children[part.Id].src = part.source;
     });
 
@@ -110,36 +111,23 @@ function renderKnight(view, knight) {
     view.name.val(knight.name);
 
     //stats
-    /*let i = 0;
+    let i = 0;
     view.stats.forEach(stat => {
 
         stat.val(knight.stats[i].value);
         i++;
-    });*/
-    /*
-    let $stats = $("#stats");
-    //render armor
-    knight.armor.forEach(part => {
-        //console.log(armorPart);
-        stats.children[part.Id].src = part.value;
-    });*/
-
+    });
 
     //traits
-    /*let j = 0;
+    let j = 0;
     view.traits.forEach(trait => {
 
         trait.val(knight.traits[i].value);
         j++;
     });
-    $traits = $('#traits');
-
-    knight.traits.forEach(trait => {
-        
-    });*/
 
     //biography
-    //view.biography.value(knight.biography);
+    view.biography.value(knight.biography);
 }
 function toggleAnimation(logo, knight) {
 

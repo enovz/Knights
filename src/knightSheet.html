@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Blaz Klaric</title>
+	<title>Knight</title>
 
 	<!--jQuerry-->
 	<script type="text/javascript" src="./lib/jquery.min.js"></script>
@@ -16,37 +16,45 @@
 
 
 <body>
-
-	<!-- knight -->
-	<div id="knight">
-		<!-- armor -->
-		<div id="armor" style="min-height:500px; height:100%; width:50%;">
-			<!-- image tags go here -->
-			<img id="helm" src="" />
-			<img id="chest" src="" />
-			<img id="arms" src="" />
-			<img id="legs" src="" />
+	<div id="main">
+		<div class="row">
+			<div class="col-sm-9" id="armor">
+					<!-- image tags go here -->
+					<img id="helmet" src="" />
+					<img id="torso" src="" />
+					<img id="arms" src="" />
+					<img id="legs" src="" />
+			</div>
+			
+			<div id="stats" class="col-sm-3">
+				<input type="text" id="Name" value="" readonly>
+				<input type="number" id="stat_1" value="" readonly>
+				<input type="number" id="stat_2" value="" readonly>
+				<input type="number" id="stat_3" value="" readonly>
+				<input type="number" id="stat_4" value="" readonly>
+				<input type="number" id="stat_5" value="" readonly>
+				<input type="number" id="stat_6" value="" readonly>
+			</div>
 		</div>
 
-		<!-- name -->
-		<div id = "name"></div>
-		<!-- stats -->
-		<div id="stats"></div>
-		<!-- traits -->
-		<div id="traits"></div>
-		<!-- biography -->
-		<div id="biography"></div>
-		
+		<div class="row">
+			<div id="traits" class="col-sm-6">
+				<input type="text" id="trait_1" value="" readonly>
+				<input type="text" id="trait_2" value="" readonly>
+				<input type="text" id="trait_3" value="" readonly>
+				<input type="text" id="trait_4" value="" readonly>
+				<input type="text" id="trait_5" value="" readonly>
+			</div>
+			<div id="skills" class="col-sm-6">
+				<input type="text" id="skill_1" value="" readonly>
+				<input type="text" id="skill_2" value="" readonly>
+				<input type="text" id="skill_3" value="" readonly>
+				<input type="text" id="skill_4" value="" readonly>
+				<input type="text" id="skill_5" value="" readonly>
+			</div>
+		</div>
+
 	</div>
-
-	<!-- logo -->
-	<div class="logo-container">
-		<img id="logo" src="logo" />
-	</div>
-
-	<!-- loading -->
-	<div id="animation"></div>
-
 
 	<script type="text/javascript" src="../build/app.js"></script>
 
