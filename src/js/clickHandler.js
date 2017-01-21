@@ -22,7 +22,6 @@
 /**dependencies */
 import { Knight } from './Knight'
 <<<<<<< HEAD
-import { KnightsModule } from './KnightsModule'
 =======
 import { printKnight } from './printKnight'
 
