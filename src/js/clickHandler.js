@@ -34,7 +34,6 @@ export function clickHandler() {
     let view = getView();
     let newKnight = new Knight();
 
-<<<<<<< HEAD
     var loader = $('#loading-banner');
     
 
@@ -42,18 +41,13 @@ export function clickHandler() {
     console.log(view);
     console.log(newKnight);
 
-    /*renderKnight(view, newKnight);
+    renderKnight(view, newKnight);
     printKnight();
     resetView(view.logo, view.knight);*/
     coolDown();
 
    loader.css('display','block');
-=======
 
-    renderKnight(view, newKnight);
-    //printKnight(this._templateSource);
-    
->>>>>>> v0.1.2
 
 }
 
