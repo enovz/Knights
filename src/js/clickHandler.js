@@ -34,7 +34,7 @@ export function clickHandler() {
 
     renderKnight(view, newKnight);
     printKnight(this._templateSource);
-    //toggleAnimation(view.logo, view.knight);
+    
 
 }
 
@@ -68,18 +68,6 @@ function getView() {
         knight: $knight,
         armor: $armor,
         name: $name,
-        /*stats: {
-            stat_1: $stats.find('#stat_1'),
-            stat_2: $stats.find('#stat_2'),
-            stat_3: $stats.find('#stat_3'),
-            stat_4: $stats.find('#stat_4'),
-            stat_5: $stats.find('#stat_5'),
-        },
-        traits: {
-            trait_1: $traits.find('#trait_1'),
-            trait_2: $traits.find('#trait_2'),
-            trait_3: $traits.find('#trait_3'),
-        },*/
         traits: $traits,
         stats: $stats,
         biography: $biography
@@ -99,10 +87,10 @@ function renderKnight(view, knight) {
      * 5. renderBiography
      */
 
+    //jquerry not working
     let $armor = $("#armor");
     //render armor
     knight.armor.forEach(part => {
-        //console.log(armorPart);
         armor.children[part.Id].src = part.source;
     });
 
@@ -110,33 +98,10 @@ function renderKnight(view, knight) {
     view.name.val(knight.name);
 
     //stats
-    /*let i = 0;
-    view.stats.forEach(stat => {
-
-        stat.val(knight.stats[i].value);
-        i++;
-    });*/
-    /*
-    let $stats = $("#stats");
-    //render armor
-    knight.armor.forEach(part => {
-        //console.log(armorPart);
-        stats.children[part.Id].src = part.value;
-    });*/
 
 
     //traits
-    /*let j = 0;
-    view.traits.forEach(trait => {
 
-        trait.val(knight.traits[i].value);
-        j++;
-    });
-    $traits = $('#traits');
-
-    knight.traits.forEach(trait => {
-        
-    });*/
 
     //biography
     //view.biography.value(knight.biography);
