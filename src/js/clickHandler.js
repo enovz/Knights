@@ -1,16 +1,28 @@
 
 /**clickHandler:
+ *      1. start loading animation
+ *      2. printKnight
  * 
- * 1. get view
- * 2. create new knight
- * 3. render new knight to view
- * 4. print view
- * 5. cool down
- * 5. toggle visibility 
+ * 
+ * 1.loading animation:
+ *      1.1. get view
+ *      1.3. animation.start()
+ *      1.3. animation.stop()
+ * 
+ * 
+ * 2.printKnight:
+ *      2.1. get view
+ *      2.2. create new knight
+ *      2.3. render new knight to view
+ *      2.4. print view    
+ *      2.5. cool down
+ *      2.6. toggle animation 
  */
 
 /**dependencies */
 import { Knight } from './Knight'
+import {printKnight} from './printKnight'
+
 
 /**clickHandler */
 export function clickHandler() {
@@ -19,14 +31,10 @@ export function clickHandler() {
     let view = getView();
     let newKnight = new Knight();
 
-    //test 
-    console.log(view);
-    console.log(newKnight);
+    renderKnight(view, newKnight);
+    //printKnight(this._templateSource);
+    //toggleAnimation(view.logo, view.knight);
 
-    /*renderKnight(view, newKnight);
-    printKnight();
-    resetView(view.logo, view.knight);
-    coolDown();*/
 }
 
 function getView() {
@@ -35,6 +43,8 @@ function getView() {
      * 1. get each element from knight div (jQuerry)
      * 2. return view object composed of elements
      */
+
+    //var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
 
     //get logo element
     let $logo = $('#logo');
@@ -50,7 +60,6 @@ function getView() {
     let stats = $knight.find('#stats');
     let traits = $knight.find('#traits');
     let biography = $knight.find('#biography');
-
 
     //create view
     let view = {
@@ -76,19 +85,16 @@ function renderKnight(view, knight) {
      * 4. renderTraits
      * 5. renderBiography
      */
+    
+    //render armor
+    knight.armor.forEach(part => {
+        view.armor.children[part.Id].src = part.source;
+    });
 
-    /*knight.armor.forEach(armorPart => {
-        //console.log(armorPart);
-        document.getElementById(armorPart.Id).src = armorPart.source;
-    });*/
-}
-function printKnight() {
+    //render name
 
-    /**
-     * 1.print page
-     */
 }
-function toggleVisibility(logo, knight) {
+function toggleAnimation(logo, knight) {
 
     /**
      * 1. set knight div to be hidden
@@ -99,7 +105,7 @@ function toggleVisibility(logo, knight) {
         knight.addClass('hidden');
         logo.addClass('visable');
     }
-    else{
+    else {
         knight.addClass('visable');
         logo.addClass('hidden');
     }
