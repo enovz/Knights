@@ -44,7 +44,7 @@ function getView() {
         traits:
         biography: 
     }*/
-    
+
 }
 function renderKnight(view, knight) {
     /**
@@ -72,9 +72,12 @@ function resetView(view) {
      * 1. set knight div to be hidden
      * 2. set logo div to be visible
      */
-    
-    view.knight.addClass('hidden');
-    view.logo.addClass('visable');
+    if ($(view.knight).is(":visible")) {
+
+        view.knight.addClass('hidden');
+        view.logo.addClass('visable');
+    }
+
 }
 function coolDown() {
     /**
