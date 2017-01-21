@@ -13,15 +13,16 @@ export function KnightsModule() {
     this._version = "0.1.1";
     this._moduleName = "knights";
     this._desctiption = "paper knights generator";
+    this._templateSource = "../knightSheet.html";
 
 }
 KnightsModule.prototype.init = function () {
 
     //bind events
-    document.addEventListener('click', clickHandler, false);
+    document.addEventListener('click', clickHandler.bind(this));
 }
 KnightsModule.prototype.close = function () {
 
     //unbind events
-    document.removeEventListener('click', clickHandler, false);
+    document.removeEventListener('click', clickHandler);
 }

@@ -1,17 +1,32 @@
 
 /**clickHandler:
+ *      1. start loading animation
+ *      2. printKnight
  * 
- * 1. get view
- * 2. create new knight
- * 3. render new knight to view
- * 4. print view
- * 5. cool down
- * 5. toggle visibility 
+ * 
+ * 1.loading animation:
+ *      1.1. get view
+ *      1.3. animation.start()
+ *      1.3. animation.stop()
+ * 
+ * 
+ * 2.printKnight:
+ *      2.1. get view
+ *      2.2. create new knight
+ *      2.3. render new knight to view
+ *      2.4. print view    
+ *      2.5. cool down
+ *      2.6. toggle animation 
  */
 
 /**dependencies */
 import { Knight } from './Knight'
+<<<<<<< HEAD
 import { KnightsModule } from './KnightsModule'
+=======
+import { printKnight } from './printKnight'
+
+>>>>>>> v0.1.2
 
 /**clickHandler */
 export function clickHandler() {
@@ -20,6 +35,7 @@ export function clickHandler() {
     let view = getView();
     let newKnight = new Knight();
 
+<<<<<<< HEAD
     var loader = $('#loading-banner');
     
 
@@ -33,6 +49,12 @@ export function clickHandler() {
     coolDown();
 
    loader.css('display','block');
+=======
+
+    renderKnight(view, newKnight);
+    printKnight(this._templateSource);
+    
+>>>>>>> v0.1.2
 
 }
 
@@ -43,6 +65,8 @@ function getView() {
      * 2. return view object composed of elements
      */
 
+    //var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
+
     //get logo element
     let $logo = $('#logo');
     //get knight element
@@ -52,22 +76,21 @@ function getView() {
     //toggleVisibility($logo, $knight);
 
     //get knight elements
-    let armor = $knight.find('#armor');
-    let name = $knight.find('#name');
-    let stats = $knight.find('#stats');
-    let traits = $knight.find('#traits');
-    let biography = $knight.find('#biography');
-
+    let $armor = $knight.find('#armor');
+    let $name = $knight.find('#name');
+    let $stats = $knight.find('#stats');
+    let $traits = $knight.find('#traits');
+    let $biography = $knight.find('#biography');
 
     //create view
     let view = {
         logo: $logo,
         knight: $knight,
-        armor: armor,
-        name: name,
-        stats: stats,
-        traits: traits,
-        biography: biography
+        armor: $armor,
+        name: $name,
+        traits: $traits,
+        stats: $stats,
+        biography: $biography
 
     }
 
@@ -75,27 +98,30 @@ function getView() {
     return view;
 
 }
+
 function renderKnight(view, knight) {
-    /**
-     * 1. renderArmor
-     * 2. renderName
-     * 3. renderStats
-     * 4. renderTraits
-     * 5. renderBiography
-     */
-
-    knight.armor.forEach(armorPart => {
-        //console.log(armorPart);
-        document.getElementById(armorPart.Id).src = armorPart.source;
+=======
+    //jquerry not working
+    let $armor = $("#armor");
+    //render armor
+    knight.armor.forEach(part => {
+        armor.children[part.Id].src = part.source;
     });
-}
-function printKnight() {
+>>>>>>> v0.1.2
 
-    /**
-     * 1.print page
-     */
+    //name
+    view.name.val(knight.name);
+
+    //stats
+
+
+    //traits
+
+
+    //biography
+    //view.biography.value(knight.biography);
 }
-function toggleVisibility(logo, knight) {
+function toggleAnimation(logo, knight) {
 
     /**
      * 1. set knight div to be hidden
@@ -106,7 +132,7 @@ function toggleVisibility(logo, knight) {
         knight.addClass('hidden');
         logo.addClass('visable');
     }
-    else{
+    else {
         knight.addClass('visable');
         logo.addClass('hidden');
     }
