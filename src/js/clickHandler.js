@@ -11,6 +11,7 @@
 
 /**dependencies */
 import { Knight } from './Knight'
+import { KnightsModule } from './KnightsModule'
 
 /**clickHandler */
 export function clickHandler() {
@@ -19,14 +20,20 @@ export function clickHandler() {
     let view = getView();
     let newKnight = new Knight();
 
+    var loader = $('#loading-banner');
+    
+
     //test 
     console.log(view);
     console.log(newKnight);
 
     /*renderKnight(view, newKnight);
     printKnight();
-    resetView(view.logo, view.knight);
-    coolDown();*/
+    resetView(view.logo, view.knight);*/
+    coolDown();
+
+   loader.css('display','block');
+
 }
 
 function getView() {
@@ -109,4 +116,20 @@ function coolDown() {
     /**
      * 1. run timeout func 
      */
+    
+    console.log("coolDown!!!!")
+    if (!window.app) {
+
+    const app = {};
+    app.knightsModule = new KnightsModule();
+    app.knightsModule.close();
+    }
+    else {
+
+    app.knightsModule = new KnightsModule();
+    app.knightsModule.close();
+    }
+    
+    setTimeout(function(){ location.reload(); }, 3000);
 }
+

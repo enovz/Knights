@@ -11,37 +11,24 @@
 	<link rel="stylesheet" href="./lib/bootstrap.min.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="./style.css">
+	<!-- Style for loader -->
+	<link rel="stylesheet" type="text/css" href="./spin.css">
 
 </head>
 
 
 <body>
-
-	<!-- knight -->
-	<div id="knight">
-		<!-- armor -->
-		<div id="armor" style="min-height:500px; height:100%; width:50%;">
-			<!-- image tags go here -->
-			<img id="helm" src="" />
-			<img id="chest" src="" />
-			<img id="arms" src="" />
-			<img id="legs" src="" />
+	<div id="main">
+		<!-- logo -->
+		<div class="row">
+			<div id="logo">
+				<img id="logo" src="logo" />
+			</div>
+			
+			<div align="center" class=".uil-spin-css" id="loading-banner" style="display:none">
+				<img src="img/spin.svg">
+			</div>
 		</div>
-
-		<!-- name -->
-		<div id = "name"></div>
-		<!-- stats -->
-		<div id="stats"></div>
-		<!-- traits -->
-		<div id="traits"></div>
-		<!-- biography -->
-		<div id="biography"></div>
-		
-	</div>
-
-	<!-- logo -->
-	<div class="logo-container">
-		<img id="logo" src="logo" />
 	</div>
 
 
