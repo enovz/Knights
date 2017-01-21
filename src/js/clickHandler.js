@@ -21,11 +21,11 @@
 
 /**dependencies */
 import { Knight } from './Knight'
-<<<<<<< HEAD
-=======
+import { KnightsModule } from './KnightsModule'
+
 import { printKnight } from './printKnight'
 
->>>>>>> v0.1.2
+
 
 /**clickHandler */
 export function clickHandler() {
@@ -42,8 +42,8 @@ export function clickHandler() {
     console.log(newKnight);
 
     renderKnight(view, newKnight);
-    printKnight();
-    resetView(view.logo, view.knight);*/
+    //printKnight();
+    //resetView(view.logo, view.knight);
     coolDown();
 
    loader.css('display','block');
@@ -93,14 +93,21 @@ function getView() {
 }
 
 function renderKnight(view, knight) {
-=======
+
     //jquerry not working
     let $armor = $("#armor");
     //render armor
     knight.armor.forEach(part => {
+        console.log("armor")
+        console.log(armor)
+        console.log("armor children")
+        console.log(armor.children)
+        console.log("part")
+        console.log(part.Id)
+
         armor.children[part.Id].src = part.source;
     });
->>>>>>> v0.1.2
+
 
     //name
     view.name.val(knight.name);
