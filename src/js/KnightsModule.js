@@ -5,7 +5,7 @@
  */
 
 /**dependencies */
-import { clickHandler } from './js/clickHandler'
+import { clickHandler } from './clickHandler'
 
 /**Knights Module */
 export function KnightsModule() {
@@ -15,12 +15,12 @@ export function KnightsModule() {
     this._desctiption = "paper knights generator";
 
 }
-Knights.prototype.init = function () {
+KnightsModule.prototype.init = function () {
 
     //bind events
     document.addEventListener('click', clickHandler, false);
 }
-Knights.prototype.close = function () {
+KnightsModule.prototype.close = function () {
 
     //unbind events
     document.removeEventListener('click', clickHandler, false);

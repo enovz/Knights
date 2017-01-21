@@ -16,6 +16,6 @@ export function Knight() {
     this.stats = generator.getStats();
     this.traits = generator.getTraits();
     this.armor = generator.getArmorParts();
-
+    this.biography = generator.getBiography();
 }
 

@@ -15,35 +15,57 @@ import { Knight } from './Knight'
 /**clickHandler */
 export function clickHandler() {
 
+    //test
     let view = getView();
     let newKnight = new Knight();
 
-    renderKnight(view, newKnight);
+    //test 
+    console.log(view);
+    console.log(newKnight);
+
+    /*renderKnight(view, newKnight);
     printKnight();
-    resetView(view);
-    coolDown();
+    resetView(view.logo, view.knight);
+    coolDown();*/
 }
 
 function getView() {
 
     /**
-     * 1. set logo div to hidden
-     * 2. set knight div to be visible
-     * 3. get each element from knight div (jQuerry)
-     * 4. return view object composed of elements
+     * 1. get each element from knight div (jQuerry)
+     * 2. return view object composed of elements
      */
-    let $knight = $('#knight');
-    let $logo = $('#logo');
-    let helmet = $knight.find("#helmet");
-    //so on
 
-    /*let view = {
-        armor:[] -> array of armor elements
-        name: string ->
-        stats:
-        traits:
-        biography: 
-    }*/
+    //get logo element
+    let $logo = $('#logo');
+    //get knight element
+    let $knight = $('#knight');
+
+    //toggle visable/hidden
+    //resetView($logo, $knight);
+
+    //get knight elements
+    let armor = $knight.find('#armor');
+    let name = $knight.find('#name');
+    let stats = $knight.find('#stats');
+    let traits = $knight.find('#traits');
+    let biography = $knight.find('#biography');
+
+
+    //create view
+    let view = {
+        logo: $logo,
+        knight: $knight,
+        armor: armor,
+        name: name,
+        stats: stats,
+        traits: traits,
+        biography: biography
+
+    }
+
+    //return view
+    return view;
 
 }
 function renderKnight(view, knight) {
@@ -66,16 +88,20 @@ function printKnight() {
      * 1.print page
      */
 }
-function resetView(view) {
+function resetView(logo, knight) {
 
     /**
      * 1. set knight div to be hidden
      * 2. set logo div to be visible
      */
-    if ($(view.knight).is(":visible")) {
+    if (!$(logo).is(":visible")) {
 
-        view.knight.addClass('hidden');
-        view.logo.addClass('visable');
+        knight.addClass('hidden');
+        logo.addClass('visable');
+    }
+    else{
+        knight.addClass('visable');
+        logo.addClass('hidden');
     }
 
 }

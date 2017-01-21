@@ -1,5 +1,5 @@
 
-import { names, surnames, stats, traits, armorParts } from './data';
+import { names, surnames, stats, traits, armorParts, biographies } from './data';
 
 export const generator = {
 
@@ -9,8 +9,8 @@ export const generator = {
     },
     getName: function () {
 
-        let nameIndex = this.randomIntFromInterval(0, (names.length-1));
-        let surnameIndex = this.randomIntFromInterval(0, (surnames.length-1));
+        let nameIndex = this.randomIntFromInterval(0, (names.length - 1));
+        let surnameIndex = this.randomIntFromInterval(0, (surnames.length - 1));
 
         let name = names[nameIndex] + " " + surnames[surnameIndex];
         return name;
@@ -37,13 +37,13 @@ export const generator = {
 
         for (let i = 0; i < 10; i++) {
 
-            let traitIndex = this.randomIntFromInterval(0, (traits.length-1));
+            let traitIndex = this.randomIntFromInterval(0, (traits.length - 1));
             newTraits.push(traits[traitIndex]);
         }
 
         return newTraits;
     },
-    getArmorParts: function() {
+    getArmorParts: function () {
 
         let armor = [];
 
@@ -57,19 +57,37 @@ export const generator = {
 
             // torso_3.format
             let randomNumber = generator.randomIntFromInterval(1, 3); //set max number to num of files
-            let partId = armorPart + "_" +randomNumber + ".png"; //set FORMAT !!
+            let partId = armorPart + "_" + randomNumber + ".png"; //set FORMAT !!
 
             // /img/torsos/torso_3.format
             let source = imgPath + folder + partId;
 
             let newArmorPart = {
-                Id : armorPart,
-                source : source
+                Id: armorPart,
+                source: source
             };
 
             armor.push(newArmorPart);
         });
 
         return armor;
+    },
+    getBiography: function () {
+
+        let newBiography = "";
+        let used = [];
+        for (let i = 0; i < 4; i++) {
+
+            let sentenceIndex = this.randomIntFromInterval(0, (biographies.length - 1));
+
+            if(used.indexOf(sentenceIndex) === -1){
+                newBiography += biographies[sentenceIndex];
+            }
+            
+            used.push(sentenceIndex);
+        }
+
+        return newBiography;
+
     }
 };

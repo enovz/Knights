@@ -58,3 +58,9 @@ export const armorParts = [
     "arms",
     "legs"
 ];
+export const biographies = [
+    " Was born in __________ ",
+    " During the Great War of _____________ ",
+    " Was given the mission to _____________ ",
+    " Must revenge the death of ______________ ",
+];
