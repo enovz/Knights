@@ -77,10 +77,10 @@ function renderKnight(view, knight) {
      * 5. renderBiography
      */
 
-    /*knight.armor.forEach(armorPart => {
+    knight.armor.forEach(armorPart => {
         //console.log(armorPart);
         document.getElementById(armorPart.Id).src = armorPart.source;
-    });*/
+    });
 }
 function printKnight() {
 
