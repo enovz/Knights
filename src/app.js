@@ -1,13 +1,16 @@
 
 /**app */
 
-import { clickHandler } from './js/clickHandler'
+import { KnightsModule } from './js/KnightsModule'
 
 if (!window.app) {
 
-    //let app = {};
+    const app = {};
+    app.knightsModule = new KnightsModule();
+    app.knightsModule.init();
+}
+else {
 
-    document.addEventListener('click', clickHandler, false);
-
-
+    app.knightsModule = new KnightsModule();
+    app.knightsModule.init();
 }
