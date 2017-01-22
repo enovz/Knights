@@ -13,7 +13,7 @@ const rename = require('gulp-rename');
 /*-------------tasks------------------*/
 
 gulp.task('es6', () => {
-	browserify('src/app.js')
+	browserify('ver2/app.js')
 		.transform('babelify', {
 			presets: ['es2015']
 		})
@@ -36,6 +36,6 @@ gulp.task('uglify', (cb) => {
 
 gulp.task('default', ['es6', 'uglify'], () => {
 
-	gulp.watch('src/**/*.js', ['es6']);
+	gulp.watch('ver2/**/*.js', ['es6']);
 	gulp.watch('./build/*.js', ['uglify']);
 });
