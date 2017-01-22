@@ -87,22 +87,24 @@ function getView() {
 function getView() {
 
     
-    let knightV = document.getElementById('knight');
-    let armorV = document.getElementById('armor');
-    let nameV = document.getElementById('name');
-    let statsV = document.getElementById('stats');
-    let traitsV = document.getElementById('traits');
-    let biographyV = document.getElementById('biography');
+    let vKknight = document.getElementById('knight');
+    let vArmor = document.getElementById('armor');
+    let vName = document.getElementById('name');
+    let vStats = document.getElementById('stats');
+    let vTraits = document.getElementById('traits');
+    let vSkills = document.getElementById('skills');
+    let vBiography = document.getElementById('biography');
 
 
     //create view
     let view = {
-        knight: knightV,
-        armor: armorV,
-        name: nameV,
-        traits: traitsV,
-        stats: statsV,
-        biography: biographyV
+        knight: vKknight,
+        armor: vArmor,
+        name: vName,
+        stats: vStats,
+        traits: vTraits,
+        skills: vSkills,
+        biography: vBiography
     }
 
     return view;
@@ -130,6 +132,11 @@ function renderKnight(view, knight) {
         view.traits.children[i].value = knight.traits[i];
     }
 
+    //skills
+    for(let i = 0; i<view.traits.children.length; i++){
+
+        view.skills.children[i].value = knight.skills[i];
+    }
     //biography
     //view.biography.value = knight.biography;
 }

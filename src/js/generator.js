@@ -1,5 +1,5 @@
 
-import { names, surnames, stats, traits, armorParts, biographies } from './data';
+import { names, surnames, stats, traits, skills, armorParts, biographies } from './data';
 
 export const generator = {
 
@@ -35,13 +35,25 @@ export const generator = {
 
         let newTraits = [];
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
 
             let traitIndex = this.randomIntFromInterval(0, (traits.length - 1));
             newTraits.push(traits[traitIndex]);
         }
 
         return newTraits;
+    },
+    getSkills: function () {
+
+        let newSkills = [];
+
+        for (let i = 0; i < 5; i++) {
+
+            let skillIndex = this.randomIntFromInterval(0, (skills.length - 1));
+            newSkills.push(skills[skillIndex]);
+        }
+
+        return newSkills;
     },
     getArmorParts: function () {
 
@@ -88,10 +100,10 @@ export const generator = {
 
             let sentenceIndex = this.randomIntFromInterval(0, (biographies.length - 1));
 
-            if(used.indexOf(sentenceIndex) === -1){
+            if (used.indexOf(sentenceIndex) === -1) {
                 newBiography += biographies[sentenceIndex];
             }
-            
+
             used.push(sentenceIndex);
         }
 

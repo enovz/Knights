@@ -52,6 +52,24 @@ export const traits = [
     "nervous","polite","rebellious","reckless","rigid","sarcastic","selfish",
     "shy","thoughtless","timid","unkind","unstable","untidy","wicked","wise","witty"
 ];
+export const skills =[
+    "Tracking",
+    "Boxing",
+    "Athletics",
+    "Burglary",
+    "Stealth",
+    "Tactics",
+    "Swimming",
+    "Riding",
+    "Hunting",
+    "Impersonation",
+    "Gambling",
+    "Endurance",
+    "Dual Wield",
+    "Cryptography",
+    "Climbing",
+    "Botany"
+];
 export const armorParts = [
     "helm",
     "chest",
