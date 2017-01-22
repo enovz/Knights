@@ -22,7 +22,7 @@ export const generator = {
         stats.forEach(stat => {
 
             let newStat = {
-                name: stat,
+                id: stat,
                 value: this.randomIntFromInterval(0, 100)
             };
 
@@ -66,7 +66,7 @@ export const generator = {
 
             //test
             let newArmorPart = {
-                Id: armorPart,
+                id: armorPart,
                 source: source
             };
 

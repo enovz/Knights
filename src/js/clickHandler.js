@@ -35,33 +35,25 @@ export function clickHandler() {
     let newKnight = new Knight();
 
     var loader = $('#loading-banner');
-    
 
-    //test 
-    console.log(view);
-    console.log(newKnight);
 
     renderKnight(view, newKnight);
     //printKnight();
     //resetView(view.logo, view.knight);
-    coolDown();
+    //coolDown();
 
-   loader.css('display','block');
+    loader.css('display', 'block');
 
 
 }
 
-function getView() {
+/*function getView() {
 
-    /**
-     * 1. get each element from knight div (jQuerry)
-     * 2. return view object composed of elements
-     */
 
     //var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
 
     //get logo element
-    let $logo = $('#logo');
+    //let $logo = $('#logo');
     //get knight element
     let $knight = $('#knight');
 
@@ -77,7 +69,7 @@ function getView() {
 
     //create view
     let view = {
-        logo: $logo,
+        //logo: $logo,
         knight: $knight,
         armor: $armor,
         name: $name,
@@ -90,33 +82,56 @@ function getView() {
     //return view
     return view;
 
-}
+}*/
+function getView() {
 
+    
+    let knightV = document.getElementById('knight');
+    let armorV = document.getElementById('armor');
+    let nameV = document.getElementById('name');
+    let statsV = document.getElementById('stats');
+    let traitsV = document.getElementById('traits');
+    let biographyV = document.getElementById('biography');
+
+
+    //create view
+    let view = {
+        knight: knightV,
+        armor: armorV,
+        name: nameV,
+        traits: traitsV,
+        stats: statsV,
+        biography: biographyV
+    }
+
+    return view;
+}
 function renderKnight(view, knight) {
 
-    //jquerry not working
-    let $armor = $("#armor");
     //render armor
     knight.armor.forEach(part => {
-        console.log("armor")
-        console.log(armor)
-        console.log("armor children")
-        console.log(armor.children)
-        console.log("part")
-        console.log(part.Id)
 
-        armor.children[part.Id].src = part.source;
+        view.armor.children[part.id].src = part.source;
     });
 
-
     //name
-    view.name.val(knight.name);
+    view.name.value = knight.name;
 
     //stats
+    knight.stats.forEach(stat=>{
 
+        view.stats.children[stat.id].value = stat.value;
+    });
 
     //traits
+    for(let i = 0; i<view.traits.children.length; i++){
 
+        view.traits.children[i].value = knight.traits[i];
+    }
+    /*view.traits.forEach(trait =>{
+
+        view.traits.children[].value = trait;
+    });*/
 
     //biography
     //view.biography.value(knight.biography);
@@ -142,20 +157,20 @@ function coolDown() {
     /**
      * 1. run timeout func 
      */
-    
+
     console.log("coolDown!!!!")
     if (!window.app) {
 
-    const app = {};
-    app.knightsModule = new KnightsModule();
-    app.knightsModule.close();
+        const app = {};
+        app.knightsModule = new KnightsModule();
+        app.knightsModule.close();
     }
     else {
 
-    app.knightsModule = new KnightsModule();
-    app.knightsModule.close();
+        app.knightsModule = new KnightsModule();
+        app.knightsModule.close();
     }
-    
-    setTimeout(function(){ location.reload(); }, 3000);
+
+    setTimeout(function () { location.reload(); }, 3000);
 }
 
