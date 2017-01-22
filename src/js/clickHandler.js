@@ -37,6 +37,8 @@ export function clickHandler() {
     var loader = $('#loading-banner');
     
 
+
+
     //test 
     console.log(view);
     console.log(newKnight);
@@ -44,6 +46,14 @@ export function clickHandler() {
     renderKnight(view, newKnight);
     //printKnight();
     //resetView(view.logo, view.knight);
+
+    //priiint
+    var mode = 'iframe'; //popup
+    var close = mode == "popup";
+    var options = { mode : mode, popClose : close};
+    $('div.main').attr('style','visibility: visible');
+    $("div.main").printArea( options );
+    $('div.main').attr('style','visibility: hidden');
     coolDown();
 
    loader.css('display','block');
@@ -156,6 +166,6 @@ function coolDown() {
     app.knightsModule.close();
     }
     
-    setTimeout(function(){ location.reload(); }, 3000);
+    setTimeout(function(){ location.reload(); }, 9000);
 }
 
