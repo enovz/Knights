@@ -72,6 +72,8 @@ export function clickHandler() {
     var loader = $('#loading-banner');
 
 
+
+
     //test 
     //console.log(view);
     //console.log(newKnight);
@@ -84,10 +86,17 @@ export function clickHandler() {
     //priiint
     var mode = 'iframe'; //popup
     var close = mode == "popup";
+<<<<<<< HEAD
     var options = { mode: mode, popClose: close };
     $('div.main').attr('style', 'visibility: visible');
     $("div.main").printArea(options);
     $('div.main').attr('style', 'visibility: hidden');
+=======
+    var options = { mode : mode, popClose : close};
+    $('div.main').attr('style','visibility: visible');
+    $("div.main").printArea( options );
+    $('div.main').attr('style','visibility: hidden');
+>>>>>>> f35ee0a75f0cfe45be7836ae96ca0b15003e49e8
     coolDown();
 
     loader.css('display', 'block');
@@ -313,7 +322,13 @@ function coolDown() {
         app.knightsModule = new KnightsModule();
         app.knightsModule.close();
     }
+<<<<<<< HEAD
 
     setTimeout(function () { location.reload(); }, 3000);
 }*/
+=======
+    
+    setTimeout(function(){ location.reload(); }, 9000);
+}
+>>>>>>> f35ee0a75f0cfe45be7836ae96ca0b15003e49e8
 
