@@ -47,7 +47,8 @@ export function clickHandler() {
 
 }
 
-/*function getView() {
+/*depreciated
+function getView() {
 
 
     //var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
@@ -128,13 +129,9 @@ function renderKnight(view, knight) {
 
         view.traits.children[i].value = knight.traits[i];
     }
-    /*view.traits.forEach(trait =>{
-
-        view.traits.children[].value = trait;
-    });*/
 
     //biography
-    //view.biography.value(knight.biography);
+    //view.biography.value = knight.biography;
 }
 function toggleAnimation(logo, knight) {
 

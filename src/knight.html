@@ -17,46 +17,48 @@
 
 
 <body>
-	<div id="knight">
-		<div class="row">
-			<div id="armor" class="col-sm-9">
-				<!-- image tags go here -->
-				<img id="helm" src="" />
-				<img id="chest" src="" />
-				<img id="arms" src="" />
-				<img id="legs" src="" />
+	<div class="container">
+		<div id="knight">
+			<div class="row">
+				<div id="armor" class="col-sm-9">
+					<!-- image tags go here -->
+					<img id="helm" src="" />
+					<img id="chest" src="" />
+					<img id="arms" src="" />
+					<img id="legs" src="" />
+				</div>
+
+				<div id="stats" class="col-sm-3">
+					<!-- changed ids to corresponding stats -->
+					<input type="text" id="name" value="" readonly>
+					<input type="number" id="attack" value="" readonly>
+					<input type="number" id="defense" value="" readonly>
+					<input type="number" id="stamina" value="" readonly>
+					<input type="number" id="courage" value="" readonly>
+					<input type="number" id="movement" value="" readonly>
+				</div>
 			</div>
 
-			<div id="stats" class="col-sm-3">
-				<!-- changed ids to corresponding stats -->
-				<input type="text" id="name" value="" readonly>
-				<input type="number" id="attack" value="" readonly>
-				<input type="number" id="defense" value="" readonly>
-				<input type="number" id="stamina" value="" readonly>
-				<input type="number" id="courage" value="" readonly>
-				<input type="number" id="movement" value="" readonly>
+			<div class="row">
+				<div id="traits" class="col-sm-6">
+					<!-- traits -->
+					<input type="text" id="trait_1" value="" readonly>
+					<input type="text" id="trait_2" value="" readonly>
+					<input type="text" id="trait_3" value="" readonly>
+					<input type="text" id="trait_4" value="" readonly>
+					<input type="text" id="trait_5" value="" readonly>
+				</div>
+				<div id="skills" class="col-sm-6">
+					<!-- what are skills ? -->
+					<input type="text" id="skill_1" value="" readonly>
+					<input type="text" id="skill_2" value="" readonly>
+					<input type="text" id="skill_3" value="" readonly>
+					<input type="text" id="skill_4" value="" readonly>
+					<input type="text" id="skill_5" value="" readonly>
+				</div>
 			</div>
+
 		</div>
-
-		<div class="row">
-			<div id="traits" class="col-sm-6">
-				<!-- traits -->
-				<input type="text" id="trait_1" value="" readonly>
-				<input type="text" id="trait_2" value="" readonly>
-				<input type="text" id="trait_3" value="" readonly>
-				<input type="text" id="trait_4" value="" readonly>
-				<input type="text" id="trait_5" value="" readonly>
-			</div>
-			<div id="skills" class="col-sm-6">
-				<!-- what are skills ? -->
-				<input type="text" id="skill_1" value="" readonly>
-				<input type="text" id="skill_2" value="" readonly>
-				<input type="text" id="skill_3" value="" readonly>
-				<input type="text" id="skill_4" value="" readonly>
-				<input type="text" id="skill_5" value="" readonly>
-			</div>
-		</div>
-
 	</div>
 </body>
 
