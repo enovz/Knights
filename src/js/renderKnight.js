@@ -11,7 +11,6 @@ export function renderKnight() {
     let view = getView();
     let knight = new Knight();
 
-
     console.log(view);
     //render armor
     knight.armor.forEach(part => {
@@ -46,13 +45,17 @@ function getView() {
 
     //get view should get invisible elements
 
-    let vKnight = document.getElementById('knight');
-    let vArmor = document.getElementById('armor');
-    let vName = document.getElementById('name');
-    let vStats = document.getElementById('stats');
-    let vTraits = document.getElementById('traits');
-    let vSkills = document.getElementById('skills');
-    let vBiography = document.getElementById('biography');
+    let iframe = document.getElementById('knightTemplate');
+    var paperKnight = iframe.contentDocument || iframe.contentWindow.document;*/
+
+
+    let vKnight = paperKnight.getElementById('knight');
+    let vArmor = paperKnight.getElementById('armor');
+    let vName = paperKnight.getElementById('name');
+    let vStats = paperKnight.getElementById('stats');
+    let vTraits = paperKnight.getElementById('traits');
+    let vSkills = paperKnight.getElementById('skills');
+    let vBiography = paperKnight.getElementById('biography');
 
 
     //create view

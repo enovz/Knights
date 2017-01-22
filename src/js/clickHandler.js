@@ -26,8 +26,7 @@
 import { KnightsModule } from './KnightsModule'
 
 /**dependencies */
-import { printKnight } from './printKnight'
-
+import { printKnight1, printKnight2, printKnight3 } from './printKnight'
 
 
 /**clickHandler */
@@ -43,9 +42,10 @@ export function clickHandler() {
     //loader animation
     let loader = $('#loading-banner');
     loader.css('display', 'block');
-
     //print knight
-    printKnight(this._templateSource);
+    //printKnight1(this._templateSource);
+    //printKnight2(this._templateSource);
+    printKnight3(this._templateSource);
 
     
     //resetView(view.logo, view.knight);
