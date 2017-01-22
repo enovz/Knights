@@ -38,18 +38,19 @@ export function clickHandler() {
     //let newKnight = new Knight();
     //renderKnight(view, newKnight);
 
-
+ 
 
     //loader animation
-    var loader = $('#loading-banner');
+    let loader = $('#loading-banner');
     loader.css('display', 'block');
 
     //print knight
     printKnight(this._templateSource);
 
-    //shamo
+    
     //resetView(view.logo, view.knight);
-    coolDown();
+
+    //coolDown();
 
 
 

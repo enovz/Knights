@@ -7,18 +7,17 @@
  * 
  */
 
-import { renderKnight } from './helpers/renderKnight'
+import { renderKnight } from './renderKnight'
 
-export function printKnight(paperKnight) {
-
-    //test
-    console.log('printKnight invoked with: ');
-    console.log(paperKnight);
+export function printKnight(knightTemplate) {
 
     //create iframe
     let iFrame = document.createElement("iframe");
     //iFrame set id to knight
 
+    //test
+    console.log(iFrame);
+    
     //before print
     iFrame.onload = setPrint;
 
@@ -28,12 +27,10 @@ export function printKnight(paperKnight) {
     iFrame.style.right = "0";
     iFrame.style.bottom = "0";
 
-    //render knight in iframe (fill fields)
-    renderKnight();
-
     //set source 
-    iFrame.src = paperKnight;
+    iFrame.src = knightTemplate;
     document.body.appendChild(iFrame);
+
 }
 
 function closePrint() {
@@ -41,7 +38,12 @@ function closePrint() {
 }
 
 function setPrint() {
+
     this.contentWindow.__container__ = this;
+
+    //render knight in iframe (fill fields)
+    renderKnight();
+
     this.contentWindow.onbeforeunload = closePrint;
     this.contentWindow.onafterprint = closePrint;
     this.contentWindow.focus(); // Required for IE

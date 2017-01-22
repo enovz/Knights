@@ -13,7 +13,7 @@ export function KnightsModule() {
     this._version = "0.1.1";
     this._moduleName = "knights";
     this._desctiption = "paper knights generator";
-    this._templateSource = "../knightSheet.html";
+    this._templateSource = "./knight.html";
 
 }
 KnightsModule.prototype.init = function () {
