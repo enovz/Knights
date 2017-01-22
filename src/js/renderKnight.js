@@ -46,7 +46,7 @@ function getView() {
     //get view should get invisible elements
 
     let iframe = document.getElementById('knightTemplate');
-    var paperKnight = iframe.contentDocument || iframe.contentWindow.document;*/
+    var paperKnight = iframe.contentDocument || iframe.contentWindow.document;
 
 
     let vKnight = paperKnight.getElementById('knight');
