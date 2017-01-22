@@ -6,10 +6,18 @@
  * 4. after print
  * 
  */
+
+import { renderKnight } from './helpers/renderKnight'
+
 export function printKnight(paperKnight) {
 
+    //test
+    console.log('printKnight invoked with: ');
+    console.log(paperKnight);
+
     //create iframe
-    var iFrame = document.createElement("iframe");
+    let iFrame = document.createElement("iframe");
+    //iFrame set id to knight
 
     //before print
     iFrame.onload = setPrint;
@@ -19,6 +27,9 @@ export function printKnight(paperKnight) {
     iFrame.style.position = "fixed";
     iFrame.style.right = "0";
     iFrame.style.bottom = "0";
+
+    //render knight in iframe (fill fields)
+    renderKnight();
 
     //set source 
     iFrame.src = paperKnight;

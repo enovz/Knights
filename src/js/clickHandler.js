@@ -19,10 +19,13 @@
  *      2.6. toggle animation 
  */
 
-/**dependencies */
-import { Knight } from './Knight'
+//depreciated
+//import { Knight } from './Knight'
+
+//circular dependencie filipe
 import { KnightsModule } from './KnightsModule'
 
+/**dependencies */
 import { printKnight } from './printKnight'
 
 
@@ -30,19 +33,25 @@ import { printKnight } from './printKnight'
 /**clickHandler */
 export function clickHandler() {
 
-    //test
-    let view = getView();
-    let newKnight = new Knight();
+    //moved to renderKnight.js
+    //let view = getView();
+    //let newKnight = new Knight();
+    //renderKnight(view, newKnight);
 
+
+
+    //loader animation
     var loader = $('#loading-banner');
-
-
-    renderKnight(view, newKnight);
-    //printKnight();
-    //resetView(view.logo, view.knight);
-    //coolDown();
-
     loader.css('display', 'block');
+
+    //print knight
+    printKnight(this._templateSource);
+
+    //shamo
+    //resetView(view.logo, view.knight);
+    coolDown();
+
+
 
 
 }
@@ -84,7 +93,9 @@ function getView() {
     return view;
 
 }*/
-function getView() {
+
+//moved to renderKnight.js
+/*function getView() {
 
     
     let vKknight = document.getElementById('knight');
@@ -139,7 +150,7 @@ function renderKnight(view, knight) {
     }
     //biography
     //view.biography.value = knight.biography;
-}
+}*/
 function toggleAnimation(logo, knight) {
 
     /**
