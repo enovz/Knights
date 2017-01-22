@@ -26,3 +26,12 @@ KnightsModule.prototype.close = function () {
     //unbind events
     document.removeEventListener('click', clickHandler);
 }
+KnightsModule.prototype.restart = function () {
+
+    this.close();
+    setTimeout(function () { location.reload(); }, 3000);
+    this.start();
+}
+
+
+

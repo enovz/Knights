@@ -11,7 +11,6 @@ export function renderKnight() {
     let view = getView();
     let knight = new Knight();
 
-    console.log(view);
     //render armor
     knight.armor.forEach(part => {
 
