@@ -21,7 +21,7 @@ export const api = {
 function clickAnyWhere() {
 
     //setup
-    let view = getView(layersNum);
+    let view = getView();
     let newKnight = new Knight();
 
     //handle click
