@@ -40,8 +40,8 @@ export function clickHandler() {
 
     //test
     renderKnight(view, newKnight);
-    //printKnight();
-    $('div.main').attr('style', 'visibility: visible');
+    printKnight();
+    //$('div.main').attr('style', 'visibility: visible');
     view.logo.css('display', 'none');
     view.loader.css('display', 'none');
 

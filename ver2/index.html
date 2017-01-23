@@ -11,7 +11,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="./lib/bootstrap.min.css">
 	<!-- Style -->
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./styleChrome.css">
 	<!-- Style for loader -->
 	<link rel="stylesheet" type="text/css" href="./spin.css">
 
@@ -40,11 +40,12 @@
 			</div>
 			<!-- logo and animation end -->
 
+
 			<!-- paperKnight start (print page) -->
-			<div class="main" id="knight" style="visibility: hidden;">
+			<div class="main" id="knight" style="visibility:hidden;">
 
 				<!-- test -->
-				<img src="./img/Character_sheet.png" />
+				<img class="container-background" src="./img/Character_sheet.png" />
 				<!-- test end -->
 
 
@@ -62,7 +63,7 @@
 
 					<!-- STATS -->
 					<div class="col-sm-3 stats">
-						<div id="stats" class="input-group">
+						<div id="stats" class="input-group stats">
 							<!-- changed ids to corresponding stats -->
 							<input type="text" id="name" class="form-control name" value="" readonly>
 							<input type="text" id="attack" class="form-control stat1" value="" readonly>
