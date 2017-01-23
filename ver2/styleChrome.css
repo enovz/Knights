@@ -1,8 +1,8 @@
 
 .container-background{
     position:absolute;
-    top: inherit;
-    left: inherit;
+    top:1%;
+    left: 5%;
     max-width:100%;
     max-height:100%;
     z-index: 0;
@@ -16,8 +16,8 @@
 }
 #armor>img{
     position:absolute;
-    top: 0px;
-    left: 40px;
+    top:2%;
+    left: 30%;
     max-width:100%;
     max-height:100%;
 }
@@ -45,41 +45,42 @@
 }
 .stats{
     position:absolute;
-    top:0px;
-    left:400px;
+    top:0%;
+    left: 60%;
 }
 .name{
     position:relative;
     margin-left:5%;
-    margin-top:10%;
+    margin-top:18%;
     margin-bottom: 20%;
-    /*margin-left:20px;
-    margin-top:20px;
-    margin-bottom: 40px;*/
 }
 .firstStat{
     position: relative;
-    margin-left:5%;
+    /*margin-left:1%;*/
     margin-top:0;
     margin-bottom: 2%;
+    
 }
 .stat{
     position: relative;
-    margin-left:5%;
-    margin-top:1.5%;
+    /*margin-left:1%;*/
+    margin-top:3%;
     margin-bottom: 2%;
-    /*margin-left:20px;
-    margin-top:20px;*/
 }
 .traits{
     position:absolute;
-    top:0;
-    left:0;
+    top:55%;
+    left:10%;
+}
+trait{
+
 }
 .skills{
     position:absolute;
-    top:0;
-    left:0;
+    top:55%;
+    left:50%;
 }
+skill{
 
+}
 
