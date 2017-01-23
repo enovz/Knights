@@ -23,7 +23,7 @@ export const generator = {
 
             let newStat = {
                 id: stat,
-                value: this.randomIntFromInterval(0, 100)
+                value: this.randomIntFromInterval(0, 99)
             };
 
             newStats.push(newStat);
