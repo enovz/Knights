@@ -78,7 +78,7 @@ function renderKnight(view, knight) {
     //name
     view.paperKnight.name.value = knight.name;
 
-    //stats
+    //stats    
     knight.stats.forEach(stat => {
 
         view.paperKnight.stats.children[stat.id].value = stat.value;
