@@ -1,4 +1,11 @@
-
+.center-align{
+    margin:0 auto;
+    display: block;
+}
+.paperKnight{
+   visibility: hidden;
+   height:100vh;
+}
 .container-background{
     position:absolute;
     top:1%;

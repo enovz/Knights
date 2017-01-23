@@ -1,53 +1,37 @@
 
-/**clickHandler:
- *      1. start loading animation
- *      2. printKnight
- * 
- * 
- * 1.loading animation:
- *      1.1. get view
- *      1.3. animation.start()
- *      1.3. animation.stop()
- * 
- * 
- * 2.printKnight:
- *      2.1. get view
- *      2.2. create new knight
- *      2.3. render new knight to view
- *      2.4. print view    
- *      2.5. cool down
- *      2.6. toggle animation 
+/**api:
+ *      1.clickAnyWhere:
+ *          1. start loading animation
+ *          2. render knight
+ *          3. printKnight
+ *          3. restart aplication
  */
 
 /**dependencies */
-import { Knight } from './helpers/Knight'
+import { Knight } from './domain/Knight'
 
+export const api = {
 
-/**clickHandler */
-export function clickHandler() {
+    clickAnyWhere : clickAnyWhere
+
+}
+
+/**clickAnyWhere */
+function clickAnyWhere() {
 
     //setup
     let view = getView();
     let newKnight = new Knight();
 
     //handle click
-    /*renderKnight(view, newKnight);
+    renderKnight(view, newKnight);
     printKnight();
     view.logo.css('display', 'none');
     view.loader.css('display', 'block');
 
-    this.restart();*/
+    this.restart();
 
-    //test
-    renderKnight(view, newKnight);
-    printKnight();
-    //$('div.main').attr('style', 'visibility: visible');
-    view.logo.css('display', 'none');
-    view.loader.css('display', 'none');
-
-    //this.restart();
 }
-
 function getView() {
 
 
@@ -118,11 +102,21 @@ function renderKnight(view, knight) {
 }
 function printKnight() {
 
-    let mode = 'iframe'; //popup
+    //woking example
+    /*let mode = 'iframe'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: close };
-    $('div.main').attr('style', 'visibility: visible');
-    $("div.main").printArea(options);
-    $('div.main').attr('style', 'visibility: hidden');
+    $('div.paperKnight').attr('style', 'visibility: visible');
+    $("div.paperKnight").printArea(options);
+    $('div.paperKnight').attr('style', 'visibility: hidden');*/
+
+
+    //testing
+    let mode = 'popup'; //popup
+    let close = mode == "popup";
+    let options = { mode: mode, popClose: false };
+    $('div.paperKnight').attr('style', 'visibility: visible');
+    $("div.paperKnight").printArea(options);
+    $('div.paperKnight').attr('style', 'visibility: hidden');
 }
 
