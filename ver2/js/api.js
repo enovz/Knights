@@ -1,5 +1,6 @@
 
-/**api:
+/**knights api:
+ * 
  *      1.clickAnyWhere:
  *          1. start loading animation
  *          2. render knight

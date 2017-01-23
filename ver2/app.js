@@ -1,21 +1,24 @@
 
 /**app :
- * 
- *      1. initialize app
+ *      1. create or hook to app
  *      2. create starting module
- *      3. initalize module
+ *      3. initalize modules
 */
 
-import { KnightsModule } from './js/KnightsModule'
+import { startModule } from './js/KnightsModule'
 
 if (!window.app) {
 
     const app = {};
-    app.knightsModule = new KnightsModule();
-    app.knightsModule.init();
+    app.startModule = new startModule();
+
+    //initialize modules
+    app.startModule.init();
 }
 else {
 
-    app.knightsModule = new KnightsModule();
-    app.knightsModule.init();
+    app.startModule = new startModule();
+
+    //intialize modules
+    app.startModule.init();
 }

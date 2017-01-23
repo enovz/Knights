@@ -10,7 +10,7 @@ import{ api } from './api'
 /**Knights Module */
 export function KnightsModule() {
 
-    this._version = "0.1.1";
+    this._version = "3.0.0";
     this._moduleName = "knights";
     this._desctiption = "paper knights generator";
     this._api = api;
