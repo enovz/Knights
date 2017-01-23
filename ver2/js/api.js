@@ -10,10 +10,11 @@
 
 /**dependencies */
 import { Knight } from './domain/Knight'
+import { layers } from './data/data'
 
 export const api = {
 
-    clickAnyWhere : clickAnyWhere
+    clickAnyWhere: clickAnyWhere
 
 }
 
@@ -21,7 +22,8 @@ export const api = {
 function clickAnyWhere() {
 
     //setup
-    let view = getView();
+    let layersNum = renderLayers();
+    let view = getView(layersNum);
     let newKnight = new Knight();
 
     //handle click
@@ -33,14 +35,14 @@ function clickAnyWhere() {
     this.restart();
 
 }
-function getView() {
+function getView(layersNum) {
 
 
     //logo and animation
     let logo = $('#logo');
     let loader = $('#loading-banner');
 
-    let vKnight = document.getElementById('knight');
+    let vKnight = document.getElementById('paperKnight');
     let vArmor = document.getElementById('armor');
     let vName = document.getElementById('name');
     let vStats = document.getElementById('stats');
@@ -48,13 +50,13 @@ function getView() {
     let vSkills = document.getElementById('skills');
     let vBiography = document.getElementById('biography');
 
-
     //create view
     let view = {
         logo: logo,
         loader: loader,
         paperKnight: {
-            knight: vKnight,
+            self: vKnight,
+            layers: layersNum,
             armor: vArmor,
             name: vName,
             stats: vStats,
@@ -67,13 +69,39 @@ function getView() {
 
     return view;
 };
-function renderKnight(view, knight) {
+/**test */
+function renderLayers() {
 
+    //setup
+    let paperKnight = document.getElementById('paperKnight');
+    let imgPath = './img'
+    let i = 0;
+
+    layers.forEach(layer => {
+
+        // ./img/outline/
+        let name = '/' + layer + '/';
+        // ./img/outline_3.format
+        let source = imgPath + layer + ".png" //format
+        let zIndex = i*10; 
+
+        let image = document.createTextNode('<img class="container-background" src=" ' + source + ' " style: z-index: " ' + zIndex +';"/>');
+        paperKnight.appendChild(image);
+
+        i++;
+    });
+
+    return i;
+}
+/**end test */
+function renderKnight(view, knight) {
 
     //render armor
     knight.armor.forEach(part => {
 
         view.paperKnight.armor.children[part.id].src = part.source;
+        //reconsider putting y-index in generator while generating armorPart data
+        view.paperKnight.armor.children[part.id].style["z-index"] = ;
     });
 
     //name

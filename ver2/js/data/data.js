@@ -34,3 +34,6 @@ export const biographies = [
     " Was given the mission to _____________ ",
     " Must revenge the death of ______________ ",
 ];
+export const layers = [
+    
+]
