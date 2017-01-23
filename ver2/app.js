@@ -1,5 +1,10 @@
 
-/**app */
+/**app :
+ * 
+ *      1. initialize app
+ *      2. create starting module
+ *      3. initalize module
+*/
 
 import { KnightsModule } from './js/KnightsModule'
 
