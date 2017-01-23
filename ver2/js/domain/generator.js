@@ -38,7 +38,10 @@ export const generator = {
         for (let i = 0; i < 5; i++) {
 
             let traitIndex = this.randomIntFromInterval(0, (traits.length - 1));
-            newTraits.push(traits[traitIndex]);
+            if(newTraits.indexOf(traits[traitIndex]) === -1){
+
+                newTraits.push(traits[traitIndex]);    
+            }
         }
 
         return newTraits;
@@ -50,7 +53,9 @@ export const generator = {
         for (let i = 0; i < 5; i++) {
 
             let skillIndex = this.randomIntFromInterval(0, (skills.length - 1));
-            newSkills.push(skills[skillIndex]);
+            if(newSkills.indexOf(skills[skillIndex]) === -1){
+                newSkills.push(skills[skillIndex]);
+            }
         }
 
         return newSkills;
