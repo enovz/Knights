@@ -13,21 +13,21 @@ export function KnightsModule() {
     this._version = "0.1.1";
     this._moduleName = "knights";
     this._desctiption = "paper knights generator";
-
+    this._handler = clickHandler.bind(this);
 }
 KnightsModule.prototype.init = function () {
 
     //bind events
-    document.addEventListener('click', clickHandler.bind(this));
+    document.addEventListener('click', this._handler, false);
 }
 KnightsModule.prototype.close = function () {
 
     //unbind events
-    document.removeEventListener('click', clickHandler);
+    document.removeEventListener('click', this._handler, false);
 }
-KnightsModule.prototype.restart = function(){
+KnightsModule.prototype.restart = function () {
 
     this.close();
-    setTimeout(function () { location.reload(); }, 9000);
-    this.init();
+    setTimeout(this.init.bind(this) , 9000); // figure out timer
+
 }
