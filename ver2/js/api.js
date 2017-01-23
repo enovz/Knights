@@ -110,13 +110,34 @@ function printKnight() {
     $("div.paperKnight").printArea(options);
     $('div.paperKnight').attr('style', 'visibility: hidden');
 
-
     //testing
-    /*let mode = 'popup'; //popup
+    /*var keyboardEvent = document.createEvent("KeyboardEvent");
+    var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+    keyboardEvent[initMethod](
+        "keydown", // event type : keydown, keyup, keypress
+        true, // bubbles
+        true, // cancelable
+        window, // viewArg: should be window
+        true, // ctrlKeyArg
+        false, // altKeyArg
+        true, // shiftKeyArg
+        false, // metaKeyArg
+        0, // keyCodeArg : unsigned long the virtual key code, else 0
+         0// charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+    );
+    let mode = 'popup'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: false };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
+    //ocument.dispatchEvent(keyboardEvent);
     $('div.paperKnight').attr('style', 'visibility: hidden');*/
+
+
+
+
+
+
 }
+
 

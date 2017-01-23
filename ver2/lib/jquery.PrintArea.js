@@ -45,7 +45,8 @@
     var settings = {};//global settings
 
     $.fn.printArea = function( options )
-    {
+    {   
+        console.log(this);
         $.extend( settings, defaults, options );
 
         counter++;
