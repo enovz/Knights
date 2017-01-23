@@ -27,7 +27,12 @@ KnightsModule.prototype.close = function () {
 }
 KnightsModule.prototype.restart = function () {
 
-    this.close();
-    setTimeout(this.init.bind(this) , 9000); // figure out timer
+    this.close(); 
+    setTimeout(function(){
+
+        location.reload();
+        this.init.bind(this);
+
+    }.bind(this),9000); // figure out timer
 
 }

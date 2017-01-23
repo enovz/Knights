@@ -29,18 +29,24 @@ export function clickHandler() {
     //setup
     let view = getView();
     let newKnight = new Knight();
-    let loader = $('#loading-banner');
 
     //handle click
     renderKnight(view, newKnight);
     printKnight();
-    loader.css('display', 'block');
+
+    view.logo.css('display', 'none');
+    view.loader.css('display', 'block');
+
     this.restart();
 
 }
 
 function getView() {
 
+
+    //logo and animation
+    let logo = $('#logo');
+    let loader = $('#loading-banner');
 
     let vKnight = document.getElementById('knight');
     let vArmor = document.getElementById('armor');
@@ -53,12 +59,17 @@ function getView() {
 
     //create view
     let view = {
-        knight: vKnight,
-        armor: vArmor,
-        name: vName,
-        stats: vStats,
-        traits: vTraits,
-        skills: vSkills/*,
+        logo: logo,
+        loader: loader,
+        paperKnight: {
+            knight: vKnight,
+            armor: vArmor,
+            name: vName,
+            stats: vStats,
+            traits: vTraits,
+            skills: vSkills
+        }
+        /*,
         biography: vBiography*/
     }
 
@@ -70,32 +81,32 @@ function renderKnight(view, knight) {
     //render armor
     knight.armor.forEach(part => {
 
-        view.armor.children[part.id].src = part.source;
+        view.paperKnight.armor.children[part.id].src = part.source;
     });
 
     //name
-    view.name.value = knight.name;
+    view.paperKnight.name.value = knight.name;
 
     //stats
     knight.stats.forEach(stat => {
 
-        view.stats.children[stat.id].value = stat.value;
+        view.paperKnight.stats.children[stat.id].value = stat.value;
     });
 
     //traits
-    for (let i = 0; i < view.traits.children.length; i++) {
+    for (let i = 0; i < view.paperKnight.traits.children.length; i++) {
 
-        view.traits.children[i].value = knight.traits[i];
+        view.paperKnight.traits.children[i].value = knight.traits[i];
     }
 
     //skills
-    for (let i = 0; i < view.skills.children.length; i++) {
+    for (let i = 0; i < view.paperKnight.skills.children.length; i++) {
 
-        view.skills.children[i].value = knight.skills[i];
+        view.paperKnight.skills.children[i].value = knight.skills[i];
     }
 
     //biography
-    //view.biography.value = knight.biography;
+    //view.paperKnight.biography.value = knight.biography;
 
 }
 function printKnight() {
