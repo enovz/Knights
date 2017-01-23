@@ -31,14 +31,21 @@ export function clickHandler() {
     let newKnight = new Knight();
 
     //handle click
-    renderKnight(view, newKnight);
+    /*renderKnight(view, newKnight);
     printKnight();
-
     view.logo.css('display', 'none');
     view.loader.css('display', 'block');
 
-    this.restart();
+    this.restart();*/
 
+    //test
+    renderKnight(view, newKnight);
+    //printKnight();
+    $('div.main').attr('style', 'visibility: visible');
+    view.logo.css('display', 'none');
+    view.loader.css('display', 'none');
+
+    //this.restart();
 }
 
 function getView() {

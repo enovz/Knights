@@ -3,70 +3,105 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Knight</title>
+	<title>Paper Knight</title>
 
-
-	<!-- no need for scripts -->
-
-	<!--jQuerry
+	<!--jQuerry-->
 	<script type="text/javascript" src="./lib/jquery.min.js"></script>
-	<script src="./lib/jquery.PrintArea.js"></script>-->
-	<!-- app 
-	<script type="text/javascript" src="../build/app.js"></script>-->
-
+	<script src="./lib/jquery.PrintArea.js"></script>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="./lib/bootstrap.min.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="./style.css">
+	<!-- Style for loader -->
+	<link rel="stylesheet" type="text/css" href="./spin.css">
 
-
-
-
+	<script type="text/javascript" src="../build/app.js"></script>
 </head>
 
 
 <body>
 
-	<div class="main" id="main">
-		
-		<div class="row">
-			<div class="col-sm-9" id="armor">
-				<!-- image tags go here -->
-				<img id="helm" src="" />
-				<img id="chest" src="" />
-				<img id="arms" src="" />
-				<img id="legs" src="" />
-			</div>
+	<!-- container -->
+	<div class="container">
+		<!--main1 start -->
+		<div id="main1">
 
-			<div id="stats" class="col-sm-3">
-				<input type="text" id="Name" value="" readonly>
-				<input type="number" id="stat_1" value="" readonly>
-				<input type="number" id="stat_2" value="" readonly>
-				<input type="number" id="stat_3" value="" readonly>
-				<input type="number" id="stat_4" value="" readonly>
-				<input type="number" id="stat_5" value="" readonly>
-				<input type="number" id="stat_6" value="" readonly>
-			</div>
-		</div>
+			<!-- logo and animation start -->
+			<div class="row">
 
-		<div class="row">
-			<div id="traits" class="col-sm-6">
-				<input type="text" id="trait_1" value="" readonly>
-				<input type="text" id="trait_2" value="" readonly>
-				<input type="text" id="trait_3" value="" readonly>
-				<input type="text" id="trait_4" value="" readonly>
-				<input type="text" id="trait_5" value="" readonly>
+				<img id="logo" src="logo" />
+
+
+				<div align="center" class=".uil-spin-css" id="loading-banner" style="display:none">
+					<img src="img/spin.svg">
+				</div>
 			</div>
-			<div id="skills" class="col-sm-6">
-				<input type="text" id="skill_1" value="" readonly>
-				<input type="text" id="skill_2" value="" readonly>
-				<input type="text" id="skill_3" value="" readonly>
-				<input type="text" id="skill_4" value="" readonly>
-				<input type="text" id="skill_5" value="" readonly>
+			<!-- logo and animation end -->
+
+			<!-- paperKnight start (print page) -->
+			<div class="main" id="knight" style="visibility: hidden;">
+				<div class="row">
+					<!-- ARMOR -->
+					<div id="armor" class="col-sm-6">
+						<!-- image tags go here -->
+						<img id="helm" src="" />
+						<img id="chest" src="" />
+						<img id="arms" src="" />
+						<img id="legs" src="" />
+					</div>
+					<!-- ARMOR end -->
+
+					<!-- STATS -->
+					<div class="col-sm-3 stats">
+						<div id="stats" class="input-group">
+							<!-- changed ids to corresponding stats -->
+							<input type="text" id="name" class="form-control" value="" readonly>
+							<input type="text" id="attack" class="form-control" value="" readonly>
+							<input type="text" id="defense" class="form-control" value="" readonly>
+							<input type="text" id="stamina" class="form-control" value="" readonly>
+							<input type="text" id="courage" class="form-control" value="" readonly>
+							<input type="text" id="movement" class="form-control" value="" readonly>
+						</div>
+					</div>
+					<!-- STATS end -->
+
+				</div>
+
+				<div class="row">
+					<!-- TRAITS -->
+					<div class="col-sm-6">
+						<div id="traits" class="input-group">
+							<input type="text" id="trait_1" class="form-control" value="adf" readonly>
+							<input type="text" id="trait_2" class="form-control" value="dsf" readonly>
+							<input type="text" id="trait_3" class="form-control" value="gfg" readonly>
+							<input type="text" id="trait_4" class="form-control" value="hghgh" readonly>
+							<input type="text" id="trait_5" class="form-control" value="jghghgh" readonly>
+						</div>
+					</div>
+					<!-- TRAITS end -->
+
+					<!-- SKILLS -->
+					<div class="col-sm-6">
+						<div id="skills" class="input-group">
+							<input type="text" id="skill_1" class="form-control" value="trfdsg" readonly>
+							<input type="text" id="skill_2" class="form-control" value="fdsgsdfg" readonly>
+							<input type="text" id="skill_3" class="form-control" value="csfgsfdg" readonly>
+							<input type="text" id="skill_4" class="form-control" value="fdsgfsdg" readonly>
+							<input type="text" id="skill_5" class="form-control" value="fdgfdgfg" readonly>
+						</div>
+					</div>
+					<!-- SKILLS end -->
+				</div>
+
 			</div>
+			<!-- paperKnight (print page) end -->
+
+
 		</div>
+		<!-- main1 end -->
 
 	</div>
+	<!-- container end -->
 </body>
 
 </html>
