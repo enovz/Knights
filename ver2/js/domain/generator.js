@@ -1,5 +1,5 @@
 
-import { names, surnames, stats, traits, skills, armorParts, biographies } from './data/data';
+import { names, surnames, stats, traits, skills, armorParts, biographies } from '../data/data';
 
 export const generator = {
 

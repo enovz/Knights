@@ -10,7 +10,6 @@
 
 /**dependencies */
 import { Knight } from './domain/Knight'
-import { layers } from './data/data'
 
 export const api = {
 
@@ -22,7 +21,6 @@ export const api = {
 function clickAnyWhere() {
 
     //setup
-    let layersNum = renderLayers();
     let view = getView(layersNum);
     let newKnight = new Knight();
 
@@ -69,39 +67,12 @@ function getView(layersNum) {
 
     return view;
 };
-/**test */
-function renderLayers() {
-
-    //setup
-    let paperKnight = document.getElementById('paperKnight');
-    let imgPath = './img'
-    let i = 0;
-
-    layers.forEach(layer => {
-
-        // ./img/outline/
-        let name = '/' + layer + '/';
-        // ./img/outline_3.format
-        let source = imgPath + layer + ".png" //format
-        let zIndex = i*10; 
-
-        let image = document.createTextNode('<img class="container-background" src=" ' + source + ' " style: z-index: " ' + zIndex +';"/>');
-        paperKnight.appendChild(image);
-
-        i++;
-    });
-
-    return i;
-}
-/**end test */
 function renderKnight(view, knight) {
 
     //render armor
     knight.armor.forEach(part => {
 
         view.paperKnight.armor.children[part.id].src = part.source;
-        //reconsider putting y-index in generator while generating armorPart data
-        view.paperKnight.armor.children[part.id].style["z-index"] = ;
     });
 
     //name

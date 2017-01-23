@@ -5,12 +5,12 @@
  *      3. initalize modules
 */
 
-import { startModule } from './js/KnightsModule'
+import { KnightsModule } from './js/KnightsModule'
 
 if (!window.app) {
 
     const app = {};
-    app.startModule = new startModule();
+    app.startModule = new KnightsModule();
 
     //initialize modules
     app.startModule.init();

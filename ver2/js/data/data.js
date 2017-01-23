@@ -9,18 +9,18 @@ export const surnames = [
 ];
 
 export const traits = [
-    "Abrasive", "Aggressive", "Aimless", "Anxious", "Apologetic", "Arrogant", "Bleak", "Careless", "Cowardly", "Cruel", "Dependable", "Depressive", "Desperate", "Despairing", "Destructive", "Dishonest", "Dull", "Fanatical", "Fragile", "Fearful", "Feeble", "Foolish", "Forgetful", "Futile", "Greedy", "Grievous", "Hateful", "Humble", "Hopeless", "Unfortunate", "Uninspired", "Idealistic", "Impatient", "Ineffective", "Indecisive", "Insecure", "Irrelevant", "Jealous", "Judgemental", "Lazy", "Manipulative", "Melancholic", "Meaningless", "Miserable", "Morbid", "Mysterious", "Naive", "Nervous", "Opinionated", "Obsessive", "Passive", "Paranoid", "Pessimistic", "Powerless", "Pretentious", "Rebellious", "Reckless", "Reflective", "Reserved", "Restless", "Rigid", "Scared", "Secretive", "Selfish", "Solitary", "Sunk", "Spiritless", "Stingy", "Stubborn", "Submissive", "Thoughtless", "Timid", "Tragic", "Trivial", "Unstable", "Vain", "Volatile", "Vindictive", "Violent", "Worthless", "Withdrawn", "Weak", "Adventurous", "Ambitious", "Anxious", "Bad-mannered", "Bold", "Cautious", "Clumsy", "Courageous", "Dangerous", "Devious", "Disrespectful", "Fearless", "Honest", "Impolite", "Inconsiderate", "Intelligent", "Loyal", "Sarcastic", "Untidy"
+    "Abrasive", "Aggressive", "Aimless", "Anxious", "Apologetic", "Arrogant", "Bleak", "Careless", "Cowardly", "Cruel", "Dependable", "Depressive", "Desperate", "Despairing", "Destructive", "Dishonest", "Dull", "Fanatical", "Fragile", "Fearful", "Feeble", "Foolish", "Forgetful", "Futile", "Greedy", "Grievous", "Hateful", "Humble", "Hopeless", "Unfortunate", "Uninspired", "Idealistic", "Impatient", "Ineffective", "Indecisive", "Insecure", "Irrelevant", "Jealous", "Judgemental", "Lazy", "Manipulative", "Melancholic", "Meaningless", "Miserable", "Morbid", "Mysterious", "Naive", "Nervous", "Opinionated", "Obsessive", "Passive", "Paranoid", "Pessimistic", "Powerless", "Pretentious", "Rebellious", "Reckless", "Reflective", "Reserved", "Restless", "Rigid", "Scared", "Secretive", "Selfish", "Solitary", "Sunk", "Spiritless", "Stingy", "Stubborn", "Submissive", "Thoughtless", "Timid", "Tragic", "Trivial", "Unstable", "Vain", "Volatile", "Vindictive", "Violent", "Worthless", "Withdrawn", "Weak"
 ];
 export const skills = [
     "Absolve", "Bargain", "Berserk", "Betray", "Bind", "Blind", "Bluff", "Break", "Burst", "Clone", "Crush", "Delude", "Destroy", "Decay", "Disguise", "Disrupt", "Dissolve", "Distract", "Dodge", "Dominate", "Elude", "Evade", "Execute", "Fade", "Focus", "Frenzy", "Fury", "Gamble", "Grasp", "Grow", "Heal", "Hex", "Hide", "Illuminate", "Imitate", "Interrupt", "Intimidate", "Leap", "Levitate", "Listen", "Maim", "Mirror", "Mislead", "Mute", "Panic", "Provoke", "Pursuit", "Rage", "Renew", "Repair", "Resolve", "Retaliate", "Rush", "Search", "Sense", "Shatter", "Sooth", "Spot", "Stun", "Sunder", "Taunt", "Torture", "Trap", "Trick", "Tumble", "Vanish", "Ward", "Weaken"
 ];
 export const stats = [
-    "attack",
-    "defense",
-    "stamina",
-    "courage",
-    "movement",
-    "wisdom"
+    "strength",
+    "dexterity",
+    "constitution",
+    "inteligence",
+    "wisdom",
+    "charisma"
 ];
 export const armorParts = [
     "helm",
@@ -34,6 +34,3 @@ export const biographies = [
     " Was given the mission to _____________ ",
     " Must revenge the death of ______________ ",
 ];
-export const layers = [
-    
-]
