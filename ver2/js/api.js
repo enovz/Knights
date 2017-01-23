@@ -103,20 +103,20 @@ function renderKnight(view, knight) {
 function printKnight() {
 
     //woking example
-    /*let mode = 'iframe'; //popup
+    let mode = 'iframe'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: close };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
-    $('div.paperKnight').attr('style', 'visibility: hidden');*/
+    $('div.paperKnight').attr('style', 'visibility: hidden');
 
 
     //testing
-    let mode = 'popup'; //popup
+    /*let mode = 'popup'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: false };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
-    $('div.paperKnight').attr('style', 'visibility: hidden');
+    $('div.paperKnight').attr('style', 'visibility: hidden');*/
 }
 
