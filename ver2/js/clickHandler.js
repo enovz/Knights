@@ -85,7 +85,11 @@ function getView() {
 function renderKnight(view, knight) {
 
 
+    //render armor
+    knight.armor.forEach(part => {
 
+        view.paperKnight.armor.children[part.id].src = part.source;
+    });
 
     //name
     view.paperKnight.name.value = knight.name;
@@ -108,11 +112,6 @@ function renderKnight(view, knight) {
         view.paperKnight.skills.children[i].value = knight.skills[i];
     }
 
-    //render armor
-    knight.armor.forEach(part => {
-
-        view.paperKnight.armor.children[part.id].src = part.source;
-    });
     //biography
     //view.paperKnight.biography.value = knight.biography;
 
