@@ -20,7 +20,7 @@
  */
 
 /**dependencies */
-import { Knight } from './Knight'
+import { Knight } from './helpers/Knight'
 
 
 /**clickHandler */
@@ -31,6 +31,7 @@ export function clickHandler() {
     let newKnight = new Knight();
     let loader = $('#loading-banner');
 
+    //handle click
     renderKnight(view, newKnight);
     printKnight();
     loader.css('display', 'block');
@@ -65,7 +66,6 @@ function getView() {
 };
 function renderKnight(view, knight) {
 
-    console.log(view);
 
     //render armor
     knight.armor.forEach(part => {
@@ -93,6 +93,7 @@ function renderKnight(view, knight) {
 
         view.skills.children[i].value = knight.skills[i];
     }
+
     //biography
     //view.biography.value = knight.biography;
 
