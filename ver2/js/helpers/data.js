@@ -19,7 +19,8 @@ export const stats = [
     "defense",
     "stamina",
     "courage",
-    "movement"
+    "movement",
+    "wisdom"
 ];
 export const armorParts = [
     "helm",

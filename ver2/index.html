@@ -61,26 +61,35 @@
 					</div>
 					<!-- ARMOR end -->
 
-					<!-- STATS -->
+					<!-- NAME AND STATS -->
 					<div class="col-sm-3 stats">
-						<div id="stats" class="input-group stats">
+
+						<!-- NAME -->
+						<input type="text" id="name" class="form-control name" value="" readonly>
+						<!-- NAME end -->
+
+						<!-- STATS -->
+						<div id="stats" class="input-group">
 							<!-- changed ids to corresponding stats -->
-							<input type="text" id="name" class="form-control name" value="" readonly>
-							<input type="text" id="attack" class="form-control stat1" value="" readonly>
+							<!--<input type="text" id="name" class="form-control name" value="" readonly>-->
+							<input type="text" id="attack" class="form-control firstStat" value="" readonly>
 							<input type="text" id="defense" class="form-control stat" value="" readonly>
 							<input type="text" id="stamina" class="form-control stat" value="" readonly>
 							<input type="text" id="courage" class="form-control stat" value="" readonly>
 							<input type="text" id="movement" class="form-control stat" value="" readonly>
+							<input type="text" id="wisdom" class="form-control stat" value="" readonly>
 						</div>
+						<!-- STATS end -->
+
 					</div>
-					<!-- STATS end -->
+					<!-- NAME AND STATS end -->
 
 				</div>
 
 				<div class="row">
 					<!-- TRAITS -->
 					<div class="col-sm-6 traits">
-						<div id="traits" class="input-group traits">
+						<div id="traits" class="input-group">
 							<input type="text" id="trait_1" class="form-control trait" value="adf" readonly>
 							<input type="text" id="trait_2" class="form-control trait" value="dsf" readonly>
 							<input type="text" id="trait_3" class="form-control trait" value="gfg" readonly>
@@ -92,7 +101,7 @@
 
 					<!-- SKILLS -->
 					<div class="col-sm-6 skills">
-						<div id="skills" class="input-group skills">
+						<div id="skills" class="input-group">
 							<input type="text" id="skill_1" class="form-control skill" value="trfdsg" readonly>
 							<input type="text" id="skill_2" class="form-control skill" value="fdsgsdfg" readonly>
 							<input type="text" id="skill_3" class="form-control skill" value="csfgsfdg" readonly>
