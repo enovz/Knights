@@ -18,22 +18,22 @@ export function KnightsModule() {
 KnightsModule.prototype.init = function () {
 
     //bind _api
-    let api = {};
+    this.api = {};
 
-    for(prop in this._api){
+    for(let prop in this._api){
 
-        api[prop] = this._api[prop].bind(this);
+        this.api[prop] = this._api[prop].bind(this);
     }
 
 
     //bind events
-    document.addEventListener('click', api.clickAnyWhere, false);
+    document.addEventListener('click', this.api.clickAnyWhere, false);
 
 }
 KnightsModule.prototype.close = function () {
 
     //unbind events
-    document.removeEventListener('click', api.clickAnyWhere, false);
+    document.removeEventListener('click', this.api.clickAnyWhere, false);
 }
 KnightsModule.prototype.restart = function () {
 
