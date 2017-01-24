@@ -38,7 +38,7 @@
                      popY       : 200,
                      popTitle   : '',
                      popClose   : false,
-                     extraCss   : '',
+                     extraCss   : '', //css src to apply to printing
                      extraHead  : '',
                      retainAttr : ["id","class","style"] };
 
