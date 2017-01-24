@@ -21,9 +21,9 @@ export const api = {
 function clickAnyWhere() {
 
     //handle click
+    startAnimation();
     renderKnight();
     printKnight();
-    startAnimation();
 
     this.restart();
 
@@ -90,35 +90,17 @@ function getView() {
 };
 function printKnight() {
 
-
     //woking example
-    
     let mode = 'iframe'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: close };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
     $('div.paperKnight').attr('style', 'visibility: hidden');
+
+}
+function startAnimation() {
     
-
-    //testing
-    /*
-    let mode = 'popup'; //popup
-    let close = mode == "popup";
-    let options = { mode: mode, popClose: false };
-    $('div.paperKnight').attr('style', 'visibility: visible');
-    $("div.paperKnight").printArea(options);
-    $('div.paperKnight').attr('style', 'visibility: hidden');
-    */
-
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("loader").style.display = "block";
 }
-function startAnimation(){
-
-    //logo and loading-banner
-    let logo = $('#logo');
-    let loader = $('#loading-banner');
-
-    view.logo.css('display', 'none');
-    view.loader.css('display', 'block');
-}
-

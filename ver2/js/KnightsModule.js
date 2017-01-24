@@ -43,6 +43,6 @@ KnightsModule.prototype.restart = function () {
         location.reload();
         this.init.bind(this);
 
-    }.bind(this), 9000); // figure out timer
+    }.bind(this), 20000); // figure out timer
 
 }
