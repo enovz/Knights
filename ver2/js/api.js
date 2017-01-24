@@ -20,54 +20,18 @@ export const api = {
 /**clickAnyWhere */
 function clickAnyWhere() {
 
-    //setup
-    let view = getView();
-    let newKnight = new Knight();
-
     //handle click
-    renderKnight(view, newKnight);
+    renderKnight();
     printKnight();
-    view.logo.css('display', 'none');
-    view.loader.css('display', 'block');
+    startAnimation();
 
     this.restart();
 
 }
-function getView(layersNum) {
+function renderKnight() {
 
-
-    //logo and animation
-    let logo = $('#logo');
-    let loader = $('#loading-banner');
-
-    let vKnight = document.getElementById('paperKnight');
-    let vArmor = document.getElementById('armor');
-    let vName = document.getElementById('name');
-    let vStats = document.getElementById('stats');
-    let vTraits = document.getElementById('traits');
-    let vSkills = document.getElementById('skills');
-    let vBiography = document.getElementById('biography');
-
-    //create view
-    let view = {
-        logo: logo,
-        loader: loader,
-        paperKnight: {
-            self: vKnight,
-            layers: layersNum,
-            armor: vArmor,
-            name: vName,
-            stats: vStats,
-            traits: vTraits,
-            skills: vSkills
-        }
-        /*,
-        biography: vBiography*/
-    }
-
-    return view;
-};
-function renderKnight(view, knight) {
+    let view = getView();
+    let knight = new Knight();
 
     //render armor
     knight.armor.forEach(part => {
@@ -100,44 +64,61 @@ function renderKnight(view, knight) {
     //view.paperKnight.biography.value = knight.biography;
 
 }
+function getView() {
+
+    let vKnight = document.getElementById('paperKnight');
+    let vArmor = document.getElementById('armor');
+    let vName = document.getElementById('name');
+    let vStats = document.getElementById('stats');
+    let vTraits = document.getElementById('traits');
+    let vSkills = document.getElementById('skills');
+    let vBiography = document.getElementById('biography');
+
+    //create view
+    let view = {
+        paperKnight: {
+            self: vKnight,
+            armor: vArmor,
+            name: vName,
+            stats: vStats,
+            traits: vTraits,
+            skills: vSkills
+        }
+    }
+
+    return view;
+};
 function printKnight() {
 
+
     //woking example
+    
     let mode = 'iframe'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: close };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
     $('div.paperKnight').attr('style', 'visibility: hidden');
+    
 
     //testing
-    /*var keyboardEvent = document.createEvent("KeyboardEvent");
-    var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
-    keyboardEvent[initMethod](
-        "keydown", // event type : keydown, keyup, keypress
-        true, // bubbles
-        true, // cancelable
-        window, // viewArg: should be window
-        true, // ctrlKeyArg
-        false, // altKeyArg
-        true, // shiftKeyArg
-        false, // metaKeyArg
-        0, // keyCodeArg : unsigned long the virtual key code, else 0
-         0// charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-    );
+    /*
     let mode = 'popup'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: false };
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
-    //ocument.dispatchEvent(keyboardEvent);
-    $('div.paperKnight').attr('style', 'visibility: hidden');*/
-
-
-
-
-
+    $('div.paperKnight').attr('style', 'visibility: hidden');
+    */
 
 }
+function startAnimation(){
 
+    //logo and loading-banner
+    let logo = $('#logo');
+    let loader = $('#loading-banner');
+
+    view.logo.css('display', 'none');
+    view.loader.css('display', 'block');
+}
 
