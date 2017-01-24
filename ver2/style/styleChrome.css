@@ -83,4 +83,22 @@ body{
     top:52%;
     left:50%;
 }
-
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.awareness{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.consciousness{
+    position:absolute;
+    top:0;
+    left:0;
+}

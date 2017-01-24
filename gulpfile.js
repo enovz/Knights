@@ -9,7 +9,8 @@ const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 const pump = require('pump');
 const rename = require('gulp-rename');
-
+const cleanCSS = require('gulp-clean-css');
+const concat = require('gulp-concat');
 /*-------------tasks------------------*/
 
 gulp.task('es6', () => {
@@ -34,8 +35,16 @@ gulp.task('uglify', (cb) => {
 	);
 })
 
-gulp.task('default', ['es6', 'uglify'], () => {
+gulp.task('css', () => {
+	gulp.src('ver2/style/**/*.css')
+		.pipe(cleanCSS())
+		.pipe(concat('style.min.css'))
+		.pipe(gulp.dest('build'))
+});
+
+gulp.task('default', ['es6', 'uglify', 'css'], () => {
 
 	gulp.watch('ver2/**/*.js', ['es6']);
 	gulp.watch('./build/*.js', ['uglify']);
+	gulp.watch('./ver2/**/*.css');
 });

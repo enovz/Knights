@@ -65,17 +65,24 @@ function renderKnight() {
         view.paperKnight.skills.children[i].value = knight.skills[i];
     }
 
+    //TODO:
     //awareness
-    knight.awareness.forEach(point => {
+   /* for (let i = 0; i < knight.awareness.length; i++) {
 
-        //create cicrle for awareness
-    });
+        let point = document.createElement('button');
+        point.style.display = "block";
+
+        document.getElementById('awareness').appendChild(point);
+    }
 
     //consciousness
-    knight.consciousness.forEach(point =>{
-        
-        //create cicrle for consciousness
-    });
+    for (let i = 0; i < knight.consciousness.length; i++) {
+
+        let point = document.createElement('button');
+        point.className += " btn btn-default btn-circle";
+
+        document.getElementById('consciousness').appendChild(point);
+    }*/
 
     //biography
     //view.paperKnight.biography.value = knight.biography;
@@ -114,7 +121,7 @@ function printKnight() {
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
     $('div.paperKnight').attr('style', 'visibility: hidden');
-    
+
 
 }
 

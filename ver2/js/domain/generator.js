@@ -65,7 +65,6 @@ export const generator = {
         //test
         let armor = [];
 
-        //let armor = {};
         //img
         let imgPath = './img'
 
@@ -89,9 +88,6 @@ export const generator = {
 
             //test
             armor.push(newArmorPart);
-
-            //armor[armorPart] = source;
-
 
         });
 
