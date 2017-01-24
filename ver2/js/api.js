@@ -28,6 +28,11 @@ function clickAnyWhere() {
     this.restart();
 
 }
+function startAnimation() {
+
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("loader").style.display = "block";
+}
 function renderKnight() {
 
     let view = getView();
@@ -59,6 +64,18 @@ function renderKnight() {
 
         view.paperKnight.skills.children[i].value = knight.skills[i];
     }
+
+    //awareness
+    knight.awareness.forEach(point => {
+
+        //create cicrle for awareness
+    });
+
+    //consciousness
+    knight.consciousness.forEach(point =>{
+        
+        //create cicrle for consciousness
+    });
 
     //biography
     //view.paperKnight.biography.value = knight.biography;
@@ -97,10 +114,7 @@ function printKnight() {
     $('div.paperKnight').attr('style', 'visibility: visible');
     $("div.paperKnight").printArea(options);
     $('div.paperKnight').attr('style', 'visibility: hidden');
+    
 
 }
-function startAnimation() {
-    
-    document.getElementById("logo").style.display = "none";
-    document.getElementById("loader").style.display = "block";
-}
+

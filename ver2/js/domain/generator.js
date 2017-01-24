@@ -114,5 +114,15 @@ export const generator = {
 
         return newBiography;
 
+    },
+    getAwareness: function(){
+
+        let awareness = this.randomIntFromInterval(1, 6);
+        return awareness;
+    },
+    getConsciousness: function(){
+
+        let consc = this.randomIntFromInterval(1, 6);
+        return consc;
     }
 };

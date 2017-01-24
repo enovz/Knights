@@ -17,6 +17,8 @@ export function Knight() {
     this.traits = generator.getTraits();
     this.skills = generator.getSkills();
     this.armor = generator.getArmorParts();
-    this.biography = generator.getBiography();
+    this.awareness = generator.getAwareness();
+    this.consciousness = generator.getConsciousness();
+    
 }
 
