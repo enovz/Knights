@@ -13,10 +13,23 @@ import { Knight } from './domain/Knight'
 
 export const api = {
 
+    pressStartKey: pressStartKey,
     clickAnyWhere: clickAnyWhere
 
 }
 
+function pressStartKey(e) {
+
+    if (e.key === 'q') {
+
+        //handle click
+        startAnimation();
+        renderKnight();
+        printKnight();
+
+        this.restart();
+    }
+}
 /**clickAnyWhere */
 function clickAnyWhere() {
 
@@ -67,22 +80,22 @@ function renderKnight() {
 
     //TODO:
     //awareness
-   /* for (let i = 0; i < knight.awareness.length; i++) {
-
-        let point = document.createElement('button');
-        point.style.display = "block";
-
-        document.getElementById('awareness').appendChild(point);
-    }
-
-    //consciousness
-    for (let i = 0; i < knight.consciousness.length; i++) {
-
-        let point = document.createElement('button');
-        point.className += " btn btn-default btn-circle";
-
-        document.getElementById('consciousness').appendChild(point);
-    }*/
+    /* for (let i = 0; i < knight.awareness.length; i++) {
+ 
+         let point = document.createElement('button');
+         point.style.display = "block";
+ 
+         document.getElementById('awareness').appendChild(point);
+     }
+ 
+     //consciousness
+     for (let i = 0; i < knight.consciousness.length; i++) {
+ 
+         let point = document.createElement('button');
+         point.className += " btn btn-default btn-circle";
+ 
+         document.getElementById('consciousness').appendChild(point);
+     }*/
 
     //biography
     //view.paperKnight.biography.value = knight.biography;

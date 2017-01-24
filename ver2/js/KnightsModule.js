@@ -5,7 +5,7 @@
  */
 
 /**dependencies */
-import{ api } from './api'
+import { api } from './api'
 
 /**Knights Module */
 export function KnightsModule() {
@@ -20,20 +20,20 @@ KnightsModule.prototype.init = function () {
     //bind _api
     this.api = {};
 
-    for(let prop in this._api){
+    for (let prop in this._api) {
 
         this.api[prop] = this._api[prop].bind(this);
     }
 
-
-    //bind events
-    document.addEventListener('click', this.api.clickAnyWhere, false);
-
+    //document.addEventListener('click', this.api.clickAnyWhere, false);
+    document.addEventListener('keypress', this.api.pressStartKey, false);
+    
 }
 KnightsModule.prototype.close = function () {
 
     //unbind events
-    document.removeEventListener('click', this.api.clickAnyWhere, false);
+    //document.removeEventListener('click', this.api.clickAnyWhere, false);
+    document.removeEventListener('keypress', this.api.pressStartKey, false);
 }
 KnightsModule.prototype.restart = function () {
 
