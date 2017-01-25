@@ -75,6 +75,7 @@ function renderKnight() {
     for (let i = 0; i < view.paperKnight.skills.children.length; i++) {
 
         view.paperKnight.skills.children[i].value = knight.skills[i];
+
     }
 
     //TODO:
