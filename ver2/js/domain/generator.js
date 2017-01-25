@@ -129,7 +129,7 @@ export const generator = {
 
 function isValid(data, array) {
 
-    if (typeof (data) !== 'undefined' && array.indexOf(data) === -1) {
+    if (typeof (data) != 'undefined' && array.indexOf(data) === -1) {
 
         return true
     }
