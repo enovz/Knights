@@ -23,7 +23,7 @@ export const generator = {
 
             let newStat = {
                 id: stat,
-                value: this.randomIntFromInterval(0, 99)
+                value: this.randomIntFromInterval(10, 99)
             };
 
             newStats.push(newStat);
@@ -35,15 +35,14 @@ export const generator = {
 
         let newTraits = [];
 
-        for (let i = 0; i < 5; i++) {
-
+        while (newTraits.length < 5) {
+            
             let traitIndex = this.randomIntFromInterval(0, (traits.length - 1));
 
             if (isValid(traits[traitIndex], newTraits)) {
 
                 newTraits.push(traits[traitIndex]);
             }
-
         }
 
         return newTraits;
@@ -52,25 +51,24 @@ export const generator = {
 
         let newSkills = [];
 
-        for (let i = 0; i < 5; i++) {
-
+        while (newSkills.length < 5) {
+            
             let skillIndex = this.randomIntFromInterval(0, (skills.length - 1));
+
             if (isValid(skills[skillIndex], newSkills)) {
 
                 newSkills.push(skills[skillIndex]);
             }
-
         }
 
         return newSkills;
     },
     getArmorParts: function () {
 
-        //test
         let armor = [];
 
         //img
-        let imgPath = './bin/img'
+        let imgPath = './img'
 
         armorParts.forEach(armorPart => {
 
@@ -90,7 +88,6 @@ export const generator = {
                 source: source
             };
 
-            //test
             armor.push(newArmorPart);
 
         });
@@ -129,11 +126,15 @@ export const generator = {
 
 function isValid(data, array) {
 
-    if (typeof (data) != 'undefined' && array.indexOf(data) === -1) {
+    if(typeof (data) === 'undefined' ) {
 
-        return true
-    }
-    else {
         return false
     }
+    if(array.indexOf(data) === -1){
+        return true;
+    }
+    /*
+    else {
+        return false
+    }*/
 }

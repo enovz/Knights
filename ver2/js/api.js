@@ -79,28 +79,6 @@ function renderKnight() {
 
     }
 
-    //TODO:
-    //awareness
-    /* for (let i = 0; i < knight.awareness.length; i++) {
- 
-         let point = document.createElement('button');
-         point.style.display = "block";
- 
-         document.getElementById('awareness').appendChild(point);
-     }
- 
-     //consciousness
-     for (let i = 0; i < knight.consciousness.length; i++) {
- 
-         let point = document.createElement('button');
-         point.className += " btn btn-default btn-circle";
- 
-         document.getElementById('consciousness').appendChild(point);
-     }*/
-
-    //biography
-    //view.paperKnight.biography.value = knight.biography;
-
 }
 function getView() {
 
@@ -127,8 +105,7 @@ function getView() {
     return view;
 };
 function printKnight() {
-
-    //woking example
+    
     let mode = 'iframe'; //popup
     let close = mode == "popup";
     let options = { mode: mode, popClose: close };

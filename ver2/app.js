@@ -11,7 +11,7 @@ if (!window.app) {
 
     const app = {};
     app.startModule = new KnightsModule();
-
+    
     //initialize modules
     app.startModule.init();
 }
