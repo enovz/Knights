@@ -36,7 +36,7 @@ function clickAnyWhere() {
     //handle click
     startAnimation();
     renderKnight();
-    //printKnight();
+    printKnight();
 
     this.restart();
 
