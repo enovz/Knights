@@ -25,19 +25,19 @@ export const stats = [
 export const armorParts = [
     {
         name: "helm",
-        maxNum : 4
+        maxNum : 48
     },
     {
         name:"chest",
-        maxNum: 4
+        maxNum: 24
     },
     {
         name: "arms",
-        maxNum: 4
+        maxNum: 12
     },
     {
         name: "legs",
-        maxNum: 4
+        maxNum: 12
     }
     
 ];
