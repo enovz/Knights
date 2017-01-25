@@ -213,7 +213,19 @@ var surnames = exports.surnames = ["Acarred", "Acartim", "Adelbard", "Adkin", "A
 var traits = exports.traits = ["Abrasive", "Aggressive", "Aimless", "Anxious", "Apologetic", "Arrogant", "Bleak", "Careless", "Cowardly", "Cruel", "Dependable", "Depressive", "Desperate", "Despairing", "Destructive", "Dishonest", "Dull", "Fanatical", "Fragile", "Fearful", "Feeble", "Foolish", "Forgetful", "Futile", "Greedy", "Grievous", "Hateful", "Humble", "Hopeless", "Unfortunate", "Uninspired", "Idealistic", "Impatient", "Ineffective", "Indecisive", "Insecure", "Irrelevant", "Jealous", "Judgemental", "Lazy", "Manipulative", "Melancholic", "Meaningless", "Miserable", "Morbid", "Mysterious", "Naive", "Nervous", "Opinionated", "Obsessive", "Passive", "Paranoid", "Pessimistic", "Powerless", "Pretentious", "Rebellious", "Reckless", "Reflective", "Reserved", "Restless", "Rigid", "Scared", "Secretive", "Selfish", "Solitary", "Sunk", "Spiritless", "Stingy", "Stubborn", "Submissive", "Thoughtless", "Timid", "Tragic", "Trivial", "Unstable", "Vain", "Volatile", "Vindictive", "Violent", "Worthless", "Withdrawn", "Weak"];
 var skills = exports.skills = ["Absolve", "Bargain", "Berserk", "Betray", "Bind", "Blind", "Bluff", "Break", "Burst", "Clone", "Crush", "Delude", "Destroy", "Decay", "Disguise", "Disrupt", "Dissolve", "Distract", "Dodge", "Dominate", "Elude", "Evade", "Execute", "Fade", "Focus", "Frenzy", "Fury", "Gamble", "Grasp", "Grow", "Heal", "Hex", "Hide", "Illuminate", "Imitate", "Interrupt", "Intimidate", "Leap", "Levitate", "Listen", "Maim", "Mirror", "Mislead", "Mute", "Panic", "Provoke", "Pursuit", "Rage", "Renew", "Repair", "Resolve", "Retaliate", "Rush", "Search", "Sense", "Shatter", "Sooth", "Spot", "Stun", "Sunder", "Taunt", "Torture", "Trap", "Trick", "Tumble", "Vanish", "Ward", "Weaken"];
 var stats = exports.stats = ["strength", "dexterity", "constitution", "inteligence", "wisdom", "charisma"];
-var armorParts = exports.armorParts = ["helm", "chest", "arms", "legs"];
+var armorParts = exports.armorParts = [{
+    name: "helm",
+    maxNum: 48
+}, {
+    name: "chest",
+    maxNum: 24
+}, {
+    name: "arms",
+    maxNum: 12
+}, {
+    name: "legs",
+    maxNum: 12
+}];
 var biographies = exports.biographies = [" Was born in __________ ", " During the Great War of _____________ ", " Was given the mission to _____________ ", " Must revenge the death of ______________ "];
 
 },{}],5:[function(require,module,exports){
@@ -328,10 +340,10 @@ var generator = exports.generator = {
         _data.armorParts.forEach(function (armorPart) {
 
             // /torsos/
-            var folder = '/' + armorPart + '/';
+            var folder = '/' + armorPart.name + '/';
 
             // torso_3.format
-            var randomNumber = generator.randomIntFromInterval(1, 3); //set max number to num of files
+            var randomNumber = generator.randomIntFromInterval(1, armorPart.maxNum); //set max number to num of files
             var partId = armorPart + "_" + randomNumber + ".png"; //set FORMAT !!
 
             // /img/torsos/torso_3.format
