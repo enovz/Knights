@@ -36,16 +36,13 @@ function clickAnyWhere() {
     //handle click
     startAnimation();
     renderKnight();
-    printKnight();
+    //printKnight();
 
     this.restart();
 
 }
 function startAnimation() {
 
-    /*var x = document.getElementsByTagName("html");
-    console.log(x);//.style.background = '';*/
-    //document.getElementById("logo").style.display = "none";
     document.getElementById("loader").style.display = "block";
 }
 function renderKnight() {

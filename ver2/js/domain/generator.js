@@ -38,10 +38,12 @@ export const generator = {
         for (let i = 0; i < 5; i++) {
 
             let traitIndex = this.randomIntFromInterval(0, (traits.length - 1));
-            if(newTraits.indexOf(traits[traitIndex]) === -1){
 
-                newTraits.push(traits[traitIndex]);    
+            if (isValid(traits[traitIndex], newTraits)) {
+
+                newTraits.push(traits[traitIndex]);
             }
+
         }
 
         return newTraits;
@@ -53,9 +55,11 @@ export const generator = {
         for (let i = 0; i < 5; i++) {
 
             let skillIndex = this.randomIntFromInterval(0, (skills.length - 1));
-            if(newSkills.indexOf(skills[skillIndex]) === -1){
+            if (isValid(skills[skillIndex], newSkills)) {
+
                 newSkills.push(skills[skillIndex]);
             }
+
         }
 
         return newSkills;
@@ -111,14 +115,25 @@ export const generator = {
         return newBiography;
 
     },
-    getAwareness: function(){
+    getAwareness: function () {
 
         let awareness = this.randomIntFromInterval(1, 6);
         return awareness;
     },
-    getConsciousness: function(){
+    getConsciousness: function () {
 
         let consc = this.randomIntFromInterval(1, 6);
         return consc;
     }
 };
+
+function isValid(data, array) {
+
+    if (typeof (data) !== 'undefined' && array.indexOf(data) === -1) {
+
+        return true
+    }
+    else {
+        return false
+    }
+}
