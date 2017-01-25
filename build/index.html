@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Blaz Klaric</title>
+
+	<!--jQuerry-->
+	<script type="text/javascript" src="./bin/lib/jquery.min.js"></script>
+	<script src="./bin/lib/jquery.PrintArea.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="./bin/lib/bootstrap.min.css">
+
+	<!-- Style -->
+	<link rel="stylesheet" type="text/css" href="../bin/style.min.css">
+	<!-- app -->
+	<script type="text/javascript" src="./bin/app.min.js"></script>
+
+</head>
+
+
+<body>
+
+	<!-- container -->
+	<div class="container">
+
+		<!-- logo and animation start -->
+		<div class="row">
+
+			<!-- loader -->
+			<div id="loader" style="display: none"></div>
+			<!-- loader -->
+
+		</div>
+		<!-- logo and animation end -->
+
+
+		<!-- paperKnight start (print page) -->
+		<div id="paperKnight" class="paperKnight" style="display:none;">
+
+			<!-- BACKGOUND LAYER -->
+			<img class="container-background" src="./img/Character_sheet.png" />
+			<!-- BACKGOUND LAYER -->
+
+
+			<div class="row">
+
+				<!-- ARMOR -->
+				<div id="armor" class="col-sm-6">
+					<!-- image tags go here -->
+					<img id="helm" src="" />
+					<img id="chest" src="" />
+					<img id="arms" src="" />
+					<img id="legs" src="" />
+				</div>
+				<!-- ARMOR end -->
+
+				<!-- NAME AND STATS -->
+				<div class="col-sm-3 stats">
+
+					<!-- NAME -->
+					<input type="text" id="name" class="form-control name" value="" readonly>
+					<!-- NAME end -->
+
+					<!-- STATS -->
+					<div id="stats" class="input-group">
+						<!-- changed ids to corresponding stats -->
+						<!--<input type="text" id="name" class="form-control name" value="" readonly>-->
+						<input type="text" id="strength" class="form-control firstStat" value="" readonly>
+						<input type="text" id="dexterity" class="form-control stat" value="" readonly>
+						<input type="text" id="constitution" class="form-control stat" value="" readonly>
+						<input type="text" id="inteligence" class="form-control stat" value="" readonly>
+						<input type="text" id="wisdom" class="form-control stat" value="" readonly>
+						<input type="text" id="charisma" class="form-control stat" value="" readonly>
+					</div>
+					<!-- STATS end -->
+
+				</div>
+				<!-- NAME AND STATS end -->
+
+			</div>
+
+			<div class="row">
+				<!-- TRAITS -->
+				<div class="col-sm-6 traits">
+					<div id="traits" class="input-group">
+						<input type="text" id="trait_1" class="form-control trait" value="adf" readonly>
+						<input type="text" id="trait_2" class="form-control trait" value="dsf" readonly>
+						<input type="text" id="trait_3" class="form-control trait" value="gfg" readonly>
+						<input type="text" id="trait_4" class="form-control trait" value="hghgh" readonly>
+						<input type="text" id="trait_5" class="form-control trait" value="jghghgh" readonly>
+					</div>
+				</div>
+				<!-- TRAITS end -->
+
+				<!-- SKILLS -->
+				<div class="col-sm-6 skills">
+					<div id="skills" class="input-group">
+						<input type="text" id="skill_1" class="form-control skill" value="trfdsg" readonly>
+						<input type="text" id="skill_2" class="form-control skill" value="fdsgsdfg" readonly>
+						<input type="text" id="skill_3" class="form-control skill" value="csfgsfdg" readonly>
+						<input type="text" id="skill_4" class="form-control skill" value="fdsgfsdg" readonly>
+						<input type="text" id="skill_5" class="form-control skill" value="fdgfdgfg" readonly>
+					</div>
+				</div>
+				<!-- SKILLS end -->
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="awareness" class="awareness">
+						<!--<button type="button" class="btn btn-danger btn-circle"></button>
+						<button type="button" class="btn btn-default btn-circle"</button>
+						<button type="button" class="btn btn-default btn-circle"</button>
+						<button type="button" class="btn btn-default btn-circle"</button>
+						<button type="button" class="btn btn-default btn-circle"</button>
+						<button type="button" class="btn btn-default btn-circle"</button>-->
+					</div>
+				</div>
+				<div class="col-sm-6 consciousness">
+					<div id="consciousness" class="consciousness">
+						<!--<button type="button" class="btn btn-default btn-circle"</button>
+						<button type="button" class="btn btn-default btn-circle"></button>
+						<button type="button" class="btn btn-default btn-circle"></i></button>
+						<button type="button" class="btn btn-default btn-circle"></button>
+						<button type="button" class="btn btn-default btn-circle"></button>
+						<button type="button" class="btn btn-default btn-circle"></button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- paperKnight (print page) end -->
+
+	</div>
+	<!-- container end -->
+
+</body>
+
+</html>

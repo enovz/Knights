@@ -21,15 +21,15 @@ gulp.task('es6', () => {
 		.bundle()
 		.pipe(source('app.js'))
 		.pipe(buffer())
-		.pipe(gulp.dest('build/'));
+		.pipe(gulp.dest('ver2/js/app'));
 });
 
 gulp.task('uglify', (cb) => {
 	pump([
-		gulp.src('build/*.js'),
+		gulp.src('ver2/js/app/*.js'),
 		rename('app.min.js'),
 		uglify(),
-		gulp.dest('build')
+		gulp.dest('build/bin')
 	],
 		cb
 	);
@@ -39,7 +39,7 @@ gulp.task('css', () => {
 	gulp.src('ver2/style/**/*.css')
 		.pipe(cleanCSS())
 		.pipe(concat('style.min.css'))
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('build/bin'))
 });
 
 gulp.task('default', ['es6', 'uglify', 'css'], () => {

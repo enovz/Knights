@@ -1,0 +1,4 @@
+1. set index.html as defult/home page in chrome
+2. open chrome properties
+3. add to target path :
+			 --enable-print-preview  --kiosk --kiosk-printing

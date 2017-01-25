@@ -68,7 +68,7 @@ export const generator = {
         let armor = [];
 
         //img
-        let imgPath = './img'
+        let imgPath = './bin//img'
 
         armorParts.forEach(armorPart => {
 
