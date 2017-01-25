@@ -23,10 +23,23 @@ export const stats = [
     "charisma"
 ];
 export const armorParts = [
-    "helm",
-    "chest",
-    "arms",
-    "legs"
+    {
+        name: "helm",
+        maxNum : 4
+    },
+    {
+        name:"chest",
+        maxNum: 4
+    },
+    {
+        name: "arms",
+        maxNum: 4
+    },
+    {
+        name: "legs",
+        maxNum: 4
+    }
+    
 ];
 export const biographies = [
     " Was born in __________ ",
