@@ -73,10 +73,10 @@ export const generator = {
         armorParts.forEach(armorPart => {
 
             // /torsos/
-            let folder = '/' + armorPart + '/';
+            let folder = '/' + armorPart.name + '/';
 
             // torso_3.format
-            let randomNumber = generator.randomIntFromInterval(1, 3); //set max number to num of files
+            let randomNumber = generator.randomIntFromInterval(1, armorPart.maxNum); //set max number to num of files
             let partId = armorPart + "_" + randomNumber + ".png"; //set FORMAT !!
 
             // /img/torsos/torso_3.format
