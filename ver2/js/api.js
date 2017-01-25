@@ -18,6 +18,7 @@ export const api = {
 
 }
 
+/**press start key */
 function pressStartKey(e) {
 
     if (e.key === 'q') {
