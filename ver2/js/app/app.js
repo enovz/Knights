@@ -344,7 +344,7 @@ var generator = exports.generator = {
 
             // torso_3.format
             var randomNumber = generator.randomIntFromInterval(1, armorPart.maxNum); //set max number to num of files
-            var partId = armorPart + "_" + randomNumber + ".png"; //set FORMAT !!
+            var partId = armorPart.name + "_" + randomNumber + ".png"; //set FORMAT !!
 
             // /img/torsos/torso_3.format
             var source = imgPath + folder + partId;
