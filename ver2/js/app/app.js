@@ -351,7 +351,7 @@ var generator = exports.generator = {
 
             //test
             var newArmorPart = {
-                id: armorPart,
+                id: armorPart.name,
                 source: source
             };
 

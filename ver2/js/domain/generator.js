@@ -84,7 +84,7 @@ export const generator = {
 
             //test
             let newArmorPart = {
-                id: armorPart,
+                id: armorPart.name,
                 source: source
             };
 
